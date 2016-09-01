@@ -1,0 +1,276 @@
+2016-09-01 11:22:23 Error: [MissingControllerException] Controller class PhpMyAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'PhpMyAdminController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/phpMyAdmin
+Stack Trace:
+#0 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-01 11:23:32 Error: [MissingControllerException] Controller class PhpMyAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'PhpMyAdminController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/phpMyAdmin
+Stack Trace:
+#0 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-01 11:23:41 Error: [MissingControllerException] Controller class PhpMyAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'PhpMyAdminController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/phpMyAdmin
+Stack Trace:
+#0 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-01 13:46:27 Error: [MissingActionException] Action PostsController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'PostsController',
+  'action' => 'index',
+)
+Request URL: /cakephp/posts
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#2 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-09-01 13:48:39 Error: [MissingViewException] View file "Posts/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Posts/index.ctp',
+)
+Request URL: /cakephp/posts
+Stack Trace:
+#0 /src/cakephp/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /src/cakephp/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#2 /src/cakephp/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#4 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-09-01 13:53:01 Error: [MissingActionException] Action PostsController::add() could not be found.
+Exception Attributes: array (
+  'controller' => 'PostsController',
+  'action' => 'add',
+)
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#2 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-09-01 13:53:02 Error: [MissingActionException] Action PostsController::add() could not be found.
+Exception Attributes: array (
+  'controller' => 'PostsController',
+  'action' => 'add',
+)
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#2 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-09-01 13:53:03 Error: [MissingActionException] Action PostsController::add() could not be found.
+Exception Attributes: array (
+  'controller' => 'PostsController',
+  'action' => 'add',
+)
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#2 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-09-01 13:53:06 Error: [MissingActionException] Action PostsController::add() could not be found.
+Exception Attributes: array (
+  'controller' => 'PostsController',
+  'action' => 'add',
+)
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#2 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-09-01 14:14:36 Error: Fatal Error (1): Call to undefined function index() in [/src/cakephp/app/View/Posts/index.ctp, line 3]
+2016-09-01 14:14:36 Error: [FatalErrorException] Call to undefined function index()
+Request URL: /cakephp/posts
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/src/cakephp/ap...', 3)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/src/cakephp/ap...', 3, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/src/cakephp/ap...', 3, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-01 14:19:02 Error: Fatal Error (1): Class 'Model' not found in [/src/cakephp/app/Model/AppModel.php, line 34]
+2016-09-01 14:19:02 Error: [FatalErrorException] Class 'Model' not found
+Request URL: /cakephp/posts
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Class 'Model' n...', '/src/cakephp/ap...', 34)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Model' n...', '/src/cakephp/ap...', 34, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Class 'Model' n...', '/src/cakephp/ap...', 34, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-01 14:19:16 Error: [MissingViewException] View file "Posts/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Posts/index.ctp',
+)
+Request URL: /cakephp/posts
+Stack Trace:
+#0 /src/cakephp/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /src/cakephp/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#2 /src/cakephp/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#4 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-09-01 14:31:47 Error: Fatal Error (4): syntax error, unexpected $end, expecting T_FUNCTION in [/src/cakephp/app/Controller/PostsController.php, line 23]
+2016-09-01 14:31:47 Error: [FatalErrorException] syntax error, unexpected $end, expecting T_FUNCTION
+Request URL: /cakephp/posts
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/src/cakephp/ap...', 23)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/src/cakephp/ap...', 23, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/src/cakephp/ap...', 23, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-01 14:31:48 Error: Fatal Error (4): syntax error, unexpected $end, expecting T_FUNCTION in [/src/cakephp/app/Controller/PostsController.php, line 23]
+2016-09-01 14:31:48 Error: [FatalErrorException] syntax error, unexpected $end, expecting T_FUNCTION
+Request URL: /cakephp/posts
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/src/cakephp/ap...', 23)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/src/cakephp/ap...', 23, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/src/cakephp/ap...', 23, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-01 15:56:20 Error: Fatal Error (4): syntax error, unexpected ')' in [/src/cakephp/app/Controller/ExamplesController.php, line 140]
+2016-09-01 15:56:20 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /cakephp/examples/index
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/src/cakephp/ap...', 140)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/src/cakephp/ap...', 140, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/src/cakephp/ap...', 140, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-01 15:56:23 Error: Fatal Error (4): syntax error, unexpected ')' in [/src/cakephp/app/Controller/ExamplesController.php, line 140]
+2016-09-01 15:56:23 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /cakephp/examples/index
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/src/cakephp/ap...', 140)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/src/cakephp/ap...', 140, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/src/cakephp/ap...', 140, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-01 15:56:24 Error: Fatal Error (4): syntax error, unexpected ')' in [/src/cakephp/app/Controller/ExamplesController.php, line 140]
+2016-09-01 15:56:24 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /cakephp/examples/index
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/src/cakephp/ap...', 140)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/src/cakephp/ap...', 140, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/src/cakephp/ap...', 140, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-01 15:56:25 Error: Fatal Error (4): syntax error, unexpected ')' in [/src/cakephp/app/Controller/ExamplesController.php, line 140]
+2016-09-01 15:56:25 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /cakephp/examples/index
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/src/cakephp/ap...', 140)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/src/cakephp/ap...', 140, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/src/cakephp/ap...', 140, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-01 15:56:36 Error: Fatal Error (4): syntax error, unexpected ')' in [/src/cakephp/app/Controller/ExamplesController.php, line 140]
+2016-09-01 15:56:36 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /cakephp/examples/index
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/src/cakephp/ap...', 140)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/src/cakephp/ap...', 140, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/src/cakephp/ap...', 140, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-01 15:56:55 Error: Fatal Error (4): syntax error, unexpected ')' in [/src/cakephp/app/Controller/ExamplesController.php, line 140]
+2016-09-01 15:56:55 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /cakephp/examples/index
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/src/cakephp/ap...', 140)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/src/cakephp/ap...', 140, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/src/cakephp/ap...', 140, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-01 15:57:00 Error: Fatal Error (4): syntax error, unexpected ')' in [/src/cakephp/app/Controller/ExamplesController.php, line 140]
+2016-09-01 15:57:00 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /cakephp/examples/index
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/src/cakephp/ap...', 140)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/src/cakephp/ap...', 140, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/src/cakephp/ap...', 140, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-01 15:57:01 Error: Fatal Error (4): syntax error, unexpected ')' in [/src/cakephp/app/Controller/ExamplesController.php, line 140]
+2016-09-01 15:57:01 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /cakephp/examples/index
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/src/cakephp/ap...', 140)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/src/cakephp/ap...', 140, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/src/cakephp/ap...', 140, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-01 15:57:05 Error: Fatal Error (4): syntax error, unexpected ')' in [/src/cakephp/app/Controller/ExamplesController.php, line 140]
+2016-09-01 15:57:05 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /cakephp/examples/
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/src/cakephp/ap...', 140)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/src/cakephp/ap...', 140, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/src/cakephp/ap...', 140, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-01 15:57:08 Error: Fatal Error (4): syntax error, unexpected ')' in [/src/cakephp/app/Controller/ExamplesController.php, line 140]
+2016-09-01 15:57:08 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /cakephp/examples/logout
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/src/cakephp/ap...', 140)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/src/cakephp/ap...', 140, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/src/cakephp/ap...', 140, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-01 16:32:22 Error: Fatal Error (1): Call to undefined method CookieComponent::reak() in [/src/cakephp/app/Controller/ExamplesController.php, line 103]
+2016-09-01 16:32:22 Error: [FatalErrorException] Call to undefined method CookieComponent::reak()
+Request URL: /cakephp/examples/login
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/src/cakephp/ap...', 103)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/src/cakephp/ap...', 103, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/src/cakephp/ap...', 103, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-01 16:32:25 Error: Fatal Error (1): Call to undefined method CookieComponent::reak() in [/src/cakephp/app/Controller/ExamplesController.php, line 103]
+2016-09-01 16:32:25 Error: [FatalErrorException] Call to undefined method CookieComponent::reak()
+Request URL: /cakephp/examples/login
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/src/cakephp/ap...', 103)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/src/cakephp/ap...', 103, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/src/cakephp/ap...', 103, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-01 16:43:07 Error: Fatal Error (4): syntax error, unexpected T_OBJECT_OPERATOR, expecting T_PAAMAYIM_NEKUDOTAYIM in [/src/cakephp/app/Controller/ExamplesController.php, line 106]
+2016-09-01 16:43:07 Error: [FatalErrorException] syntax error, unexpected T_OBJECT_OPERATOR, expecting T_PAAMAYIM_NEKUDOTAYIM
+Request URL: /cakephp/examples/index
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/src/cakephp/ap...', 106)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/src/cakephp/ap...', 106, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/src/cakephp/ap...', 106, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
