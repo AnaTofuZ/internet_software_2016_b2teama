@@ -79,9 +79,9 @@ class ExamplesController extends AppController {
       // Users テーブルの更新
       $this->User->save($user);
       // Cookie 用に id  を保存
-      $key = 'wuo9ieChee1ienai7ur7ahkie1Fee4ei';
-      $cipher = Security::encrypt($user['id'],$key);
-      $this->Cookie->write('id',$cipher);
+      $key = 'wuo9ieChee1ienai7ur7ahkie1Fee4ei';//暗号化用の鍵用意
+      $cipher = Security::encrypt($user['id'],$key);//暗号化
+      $this->Cookie->write('id',$cipher);//暗号化したものをCookieとして渡す
 //      $this->Cookie->write('id', $user['id']);
 
       // Auth Component 内のログイン処理呼び出し
@@ -103,13 +103,15 @@ class ExamplesController extends AppController {
 
     // Cookie ログインを処理するならこの辺りで・・
 
-      $key = 'wuo9ieChee1ienai7ur7ahkie1Fee4ei';
+    $key = 'wuo9ieChee1ienai7ur7ahkie1Fee4ei';//復号化用キー(暗号化と共通)
+
 	 $cookieValue = $this -> Cookie -> read('id'); //Cookieの値を読み込む
+
     if(isset($cookieValue)){ //Cookieがあったら
-    $cookieValue = Security::decrypt($cookieValue,$key);
+
+    $cookieValue = Security::decrypt($cookieValue,$key);//入ってない可能性もあるのでif文内で処理。再代入
     $user = $this ->User->read(null,$cookieValue); //DBの中のレコードをuser定義
 
-    //if(isset($cookieValue)){ //Cookieがあったら
         if($this->Auth->login($user['User'])){  //ログイン処理を呼び出して,ログイン出来れば
 //        $user = $this->Auth->user();
         return  $this->redirect($this->Auth->redirect()); //次の画面に移動せよ
