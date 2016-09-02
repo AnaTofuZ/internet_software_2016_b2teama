@@ -304,3 +304,73 @@ Stack Trace:
 #3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2016-09-02 14:09:25 Error: Fatal Error (4): syntax error, unexpected T_STRING in [/src/cakephp/app/Controller/ExamplesController.php, line 105]
+2016-09-02 14:09:25 Error: [FatalErrorException] syntax error, unexpected T_STRING
+Request URL: /cakephp/examples/login
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/src/cakephp/ap...', 105)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/src/cakephp/ap...', 105, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/src/cakephp/ap...', 105, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-02 14:10:13 Error: Fatal Error (4): syntax error, unexpected T_STRING in [/src/cakephp/app/Controller/ExamplesController.php, line 105]
+2016-09-02 14:10:13 Error: [FatalErrorException] syntax error, unexpected T_STRING
+Request URL: /cakephp/examples/login
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/src/cakephp/ap...', 105)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/src/cakephp/ap...', 105, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/src/cakephp/ap...', 105, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-02 14:10:23 Error: Fatal Error (4): syntax error, unexpected T_STRING in [/src/cakephp/app/Controller/ExamplesController.php, line 105]
+2016-09-02 14:10:23 Error: [FatalErrorException] syntax error, unexpected T_STRING
+Request URL: /cakephp/examples/login
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/src/cakephp/ap...', 105)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/src/cakephp/ap...', 105, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/src/cakephp/ap...', 105, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-02 14:10:26 Error: Fatal Error (4): syntax error, unexpected T_STRING in [/src/cakephp/app/Controller/ExamplesController.php, line 105]
+2016-09-02 14:10:26 Error: [FatalErrorException] syntax error, unexpected T_STRING
+Request URL: /cakephp/examples/
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/src/cakephp/ap...', 105)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/src/cakephp/ap...', 105, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/src/cakephp/ap...', 105, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-02 14:12:44 Error: Fatal Error (4): syntax error, unexpected T_CONSTANT_ENCAPSED_STRING in [/src/cakephp/app/Controller/ExamplesController.php, line 111]
+2016-09-02 14:12:44 Error: [FatalErrorException] syntax error, unexpected T_CONSTANT_ENCAPSED_STRING
+Request URL: /cakephp/examples/login
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/src/cakephp/ap...', 111)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/src/cakephp/ap...', 111, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/src/cakephp/ap...', 111, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-02 14:12:46 Error: Fatal Error (4): syntax error, unexpected T_CONSTANT_ENCAPSED_STRING in [/src/cakephp/app/Controller/ExamplesController.php, line 111]
+2016-09-02 14:12:46 Error: [FatalErrorException] syntax error, unexpected T_CONSTANT_ENCAPSED_STRING
+Request URL: /cakephp/examples/login
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/src/cakephp/ap...', 111)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/src/cakephp/ap...', 111, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/src/cakephp/ap...', 111, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-02 15:38:26 Error: Fatal Error (1): Call to undefined method SessionComponent::flash() in [/src/cakephp/app/Controller/ExamplesController.php, line 105]
+2016-09-02 15:38:26 Error: [FatalErrorException] Call to undefined method SessionComponent::flash()
+Request URL: /cakephp/examples/login
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/src/cakephp/ap...', 105)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/src/cakephp/ap...', 105, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/src/cakephp/ap...', 105, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
