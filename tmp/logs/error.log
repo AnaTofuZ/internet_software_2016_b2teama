@@ -374,3 +374,238 @@ Stack Trace:
 #3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2016-09-02 17:17:01 Error: [MissingActionException] Action ExamplesController::1() could not be found.
+Exception Attributes: array (
+  'controller' => 'ExamplesController',
+  'action' => '1',
+)
+Request URL: /cakephp/examples/1
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ExamplesController), Object(CakeRequest))
+#2 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-09-02 17:18:45 Error: Fatal Error (4): syntax error, unexpected T_LNUMBER, expecting T_STRING in [/src/cakephp/app/Controller/ExamplesController.php, line 165]
+2016-09-02 17:18:45 Error: [FatalErrorException] syntax error, unexpected T_LNUMBER, expecting T_STRING
+Request URL: /cakephp/examples/1
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/src/cakephp/ap...', 165)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/src/cakephp/ap...', 165, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/src/cakephp/ap...', 165, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-02 17:19:10 Error: [MissingActionException] Action ExamplesController::1() could not be found.
+Exception Attributes: array (
+  'controller' => 'ExamplesController',
+  'action' => '1',
+)
+Request URL: /cakephp/examples/1
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ExamplesController), Object(CakeRequest))
+#2 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-09-02 17:20:03 Error: [MissingActionException] Action ExamplesController::1() could not be found.
+Exception Attributes: array (
+  'controller' => 'ExamplesController',
+  'action' => '1',
+)
+Request URL: /cakephp/examples/1
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ExamplesController), Object(CakeRequest))
+#2 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-09-02 17:20:11 Error: [MissingActionException] Action ExamplesController::1() could not be found.
+Exception Attributes: array (
+  'controller' => 'ExamplesController',
+  'action' => '1',
+)
+Request URL: /cakephp/examples/1
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ExamplesController), Object(CakeRequest))
+#2 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-09-02 17:20:22 Error: [MissingActionException] Action ExamplesController::1() could not be found.
+Exception Attributes: array (
+  'controller' => 'ExamplesController',
+  'action' => '1',
+)
+Request URL: /cakephp/examples/1
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ExamplesController), Object(CakeRequest))
+#2 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-09-02 17:57:39 Error: Fatal Error (4): syntax error, unexpected ':' in [/src/cakephp/app/Controller/ExamplesController.php, line 107]
+2016-09-02 17:57:39 Error: [FatalErrorException] syntax error, unexpected ':'
+Request URL: /cakephp/examples/login
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/src/cakephp/ap...', 107)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/src/cakephp/ap...', 107, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/src/cakephp/ap...', 107, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-02 18:33:01 Error: Fatal Error (1): Cannot use [] for reading in [/src/cakephp/app/Controller/ExamplesController.php, line 107]
+2016-09-02 18:33:01 Error: [FatalErrorException] Cannot use [] for reading
+Request URL: /cakephp/examples/login
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Cannot use [] f...', '/src/cakephp/ap...', 107)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot use [] f...', '/src/cakephp/ap...', 107, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Cannot use [] f...', '/src/cakephp/ap...', 107, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-02 18:52:24 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Brønsted–Lowry' for key 'name'
+Request URL: /cakephp/examples/callback?oauth_token=0hL1SAAAAAAAhO19AAABVupQM84&oauth_verifier=E0jVo27Myrdfb5ZCAruV43GJGMLoyx7H
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(468): PDOStatement->execute(Array)
+#1 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(434): DboSource->_execute('INSERT INTO `ca...', Array)
+#2 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(1026): DboSource->execute('INSERT INTO `ca...')
+#3 /src/cakephp/lib/Cake/Model/Model.php(1933): DboSource->create(Object(User), Array, Array)
+#4 /src/cakephp/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /src/cakephp/app/Controller/ExamplesController.php(80): Model->save(Array)
+#6 [internal function]: ExamplesController->callback()
+#7 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ExamplesController), Array)
+#8 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ExamplesController), Object(CakeRequest))
+#10 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-09-02 18:52:54 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Brønsted–Lowry' for key 'name'
+Request URL: /cakephp/examples/callback?oauth_token=F4KUJgAAAAAAhO19AAABVupQpuA&oauth_verifier=2biF1KSoDo28pY505VcxJNp45PcP93gD
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(468): PDOStatement->execute(Array)
+#1 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(434): DboSource->_execute('INSERT INTO `ca...', Array)
+#2 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(1026): DboSource->execute('INSERT INTO `ca...')
+#3 /src/cakephp/lib/Cake/Model/Model.php(1933): DboSource->create(Object(User), Array, Array)
+#4 /src/cakephp/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /src/cakephp/app/Controller/ExamplesController.php(80): Model->save(Array)
+#6 [internal function]: ExamplesController->callback()
+#7 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ExamplesController), Array)
+#8 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ExamplesController), Object(CakeRequest))
+#10 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-09-02 19:10:45 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2147483647' for key 'PRIMARY'
+Request URL: /cakephp/examples/callback?oauth_token=9wIIywAAAAAAhO19AAABVupg_6c&oauth_verifier=ewz3prUd0z8olq3FvANSaRZ2awQU6vWv
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(468): PDOStatement->execute(Array)
+#1 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(434): DboSource->_execute('INSERT INTO `ca...', Array)
+#2 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(1026): DboSource->execute('INSERT INTO `ca...')
+#3 /src/cakephp/lib/Cake/Model/Model.php(1933): DboSource->create(Object(User), Array, Array)
+#4 /src/cakephp/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /src/cakephp/app/Controller/ExamplesController.php(80): Model->save(Array)
+#6 [internal function]: ExamplesController->callback()
+#7 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ExamplesController), Array)
+#8 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ExamplesController), Object(CakeRequest))
+#10 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-09-02 19:11:22 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2147483647' for key 'PRIMARY'
+Request URL: /cakephp/examples/callback?oauth_token=-9dTFwAAAAAAhO19AAABVuphg3g&oauth_verifier=uwWm7Y0IRwJuRVItXorOdAkfxSut0aVB
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(468): PDOStatement->execute(Array)
+#1 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(434): DboSource->_execute('INSERT INTO `ca...', Array)
+#2 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(1026): DboSource->execute('INSERT INTO `ca...')
+#3 /src/cakephp/lib/Cake/Model/Model.php(1933): DboSource->create(Object(User), Array, Array)
+#4 /src/cakephp/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /src/cakephp/app/Controller/ExamplesController.php(80): Model->save(Array)
+#6 [internal function]: ExamplesController->callback()
+#7 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ExamplesController), Array)
+#8 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ExamplesController), Object(CakeRequest))
+#10 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-09-02 20:02:08 Error: Fatal Error (4): syntax error, unexpected T_PUBLIC in [/src/cakephp/app/Controller/ExamplesController.php, line 123]
+2016-09-02 20:02:08 Error: [FatalErrorException] syntax error, unexpected T_PUBLIC
+Request URL: /cakephp/examples/login
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/src/cakephp/ap...', 123)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/src/cakephp/ap...', 123, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/src/cakephp/ap...', 123, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-02 20:02:58 Error: Fatal Error (4): syntax error, unexpected T_PUBLIC in [/src/cakephp/app/Controller/ExamplesController.php, line 123]
+2016-09-02 20:02:58 Error: [FatalErrorException] syntax error, unexpected T_PUBLIC
+Request URL: /cakephp/examples/login
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/src/cakephp/ap...', 123)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/src/cakephp/ap...', 123, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/src/cakephp/ap...', 123, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-02 20:02:59 Error: Fatal Error (4): syntax error, unexpected T_PUBLIC in [/src/cakephp/app/Controller/ExamplesController.php, line 123]
+2016-09-02 20:02:59 Error: [FatalErrorException] syntax error, unexpected T_PUBLIC
+Request URL: /cakephp/examples/login
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/src/cakephp/ap...', 123)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/src/cakephp/ap...', 123, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/src/cakephp/ap...', 123, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-02 20:03:04 Error: Fatal Error (4): syntax error, unexpected T_PUBLIC in [/src/cakephp/app/Controller/ExamplesController.php, line 123]
+2016-09-02 20:03:04 Error: [FatalErrorException] syntax error, unexpected T_PUBLIC
+Request URL: /cakephp/examples/
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/src/cakephp/ap...', 123)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/src/cakephp/ap...', 123, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/src/cakephp/ap...', 123, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-02 20:03:22 Error: Fatal Error (4): syntax error, unexpected T_PUBLIC in [/src/cakephp/app/Controller/ExamplesController.php, line 124]
+2016-09-02 20:03:22 Error: [FatalErrorException] syntax error, unexpected T_PUBLIC
+Request URL: /cakephp/examples/
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/src/cakephp/ap...', 124)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/src/cakephp/ap...', 124, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/src/cakephp/ap...', 124, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-02 20:03:56 Error: Fatal Error (4): syntax error, unexpected T_PUBLIC in [/src/cakephp/app/Controller/ExamplesController.php, line 123]
+2016-09-02 20:03:56 Error: [FatalErrorException] syntax error, unexpected T_PUBLIC
+Request URL: /cakephp/examples/
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/src/cakephp/ap...', 123)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/src/cakephp/ap...', 123, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/src/cakephp/ap...', 123, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-02 20:04:02 Error: Fatal Error (4): syntax error, unexpected T_PUBLIC in [/src/cakephp/app/Controller/ExamplesController.php, line 123]
+2016-09-02 20:04:02 Error: [FatalErrorException] syntax error, unexpected T_PUBLIC
+Request URL: /cakephp/examples/login
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/src/cakephp/ap...', 123)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/src/cakephp/ap...', 123, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/src/cakephp/ap...', 123, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-02 20:04:05 Error: Fatal Error (4): syntax error, unexpected T_PUBLIC in [/src/cakephp/app/Controller/ExamplesController.php, line 123]
+2016-09-02 20:04:05 Error: [FatalErrorException] syntax error, unexpected T_PUBLIC
+Request URL: /cakephp/examples/logout
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/src/cakephp/ap...', 123)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/src/cakephp/ap...', 123, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/src/cakephp/ap...', 123, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-02 20:08:33 Error: Fatal Error (4): syntax error, unexpected T_PUBLIC in [/src/cakephp/app/Controller/ExamplesController.php, line 123]
+2016-09-02 20:08:33 Error: [FatalErrorException] syntax error, unexpected T_PUBLIC
+Request URL: /cakephp/examples/login
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/src/cakephp/ap...', 123)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/src/cakephp/ap...', 123, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/src/cakephp/ap...', 123, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
