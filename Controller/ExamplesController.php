@@ -79,7 +79,10 @@ class ExamplesController extends AppController {
       // Users テーブルの更新
       $this->User->save($user);
       // Cookie 用に id  を保存
-      $this->Cookie->write('id', $user['id']);
+      $key = 'wuo9ieChee1ienai7ur7ahkie1Fee4ei';
+      $cipher = Security::encrypt($user['id'],$key);
+      $this->Cookie->write('id',$cipher);
+//      $this->Cookie->write('id', $user['id']);
 
       // Auth Component 内のログイン処理呼び出し
       if ($this->Auth->login($user)) {
@@ -100,10 +103,13 @@ class ExamplesController extends AppController {
 
     // Cookie ログインを処理するならこの辺りで・・
 
+      $key = 'wuo9ieChee1ienai7ur7ahkie1Fee4ei';
 	 $cookieValue = $this -> Cookie -> read('id'); //Cookieの値を読み込む
+    if(isset($cookieValue)){ //Cookieがあったら
+    $cookieValue = Security::decrypt($cookieValue,$key);
     $user = $this ->User->read(null,$cookieValue); //DBの中のレコードをuser定義
 
-    if(isset($cookieValue)){ //Cookieがあったら
+    //if(isset($cookieValue)){ //Cookieがあったら
         if($this->Auth->login($user['User'])){  //ログイン処理を呼び出して,ログイン出来れば
 //        $user = $this->Auth->user();
         return  $this->redirect($this->Auth->redirect()); //次の画面に移動せよ
