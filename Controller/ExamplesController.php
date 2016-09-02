@@ -100,14 +100,9 @@ class ExamplesController extends AppController {
 
     // Cookie ログインを処理するならこの辺りで・・
 
-	 $cookieValue = $this -> Cookie -> read('id');
-	 $user = $this ->User->read(null,$cookieValue);
+	 $cookieValue = $this -> Cookie -> read('id'); //Cookieの値を読み込む
+	 $user = $this ->User->read(null,$cookieValue); //DBの中のレコードをuser定義
 
-	 if(isset(Auth->login($user))){
-		 return $this->redirect($this->Auth->redirect());
-	 }else{
-		 echo "hoge";
-	 }
 
     // ログイン済みであれば index に遷移
     if(isset($user['id'])){

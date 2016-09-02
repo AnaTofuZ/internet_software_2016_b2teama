@@ -274,3 +274,33 @@ Stack Trace:
 #3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2016-09-01 17:26:37 Error: Fatal Error (4): syntax error, unexpected T_OBJECT_OPERATOR, expecting T_PAAMAYIM_NEKUDOTAYIM in [/src/cakephp/app/Controller/ExamplesController.php, line 106]
+2016-09-01 17:26:37 Error: [FatalErrorException] syntax error, unexpected T_OBJECT_OPERATOR, expecting T_PAAMAYIM_NEKUDOTAYIM
+Request URL: /cakephp/examples/index
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/src/cakephp/ap...', 106)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/src/cakephp/ap...', 106, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/src/cakephp/ap...', 106, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-01 17:26:39 Error: Fatal Error (4): syntax error, unexpected T_OBJECT_OPERATOR, expecting T_PAAMAYIM_NEKUDOTAYIM in [/src/cakephp/app/Controller/ExamplesController.php, line 106]
+2016-09-01 17:26:39 Error: [FatalErrorException] syntax error, unexpected T_OBJECT_OPERATOR, expecting T_PAAMAYIM_NEKUDOTAYIM
+Request URL: /cakephp/examples/index
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/src/cakephp/ap...', 106)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/src/cakephp/ap...', 106, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/src/cakephp/ap...', 106, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-01 19:06:47 Error: Fatal Error (1): Call to undefined function isst() in [/src/cakephp/app/Controller/ExamplesController.php, line 106]
+2016-09-01 19:06:47 Error: [FatalErrorException] Call to undefined function isst()
+Request URL: /cakephp/examples/login
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/src/cakephp/ap...', 106)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/src/cakephp/ap...', 106, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/src/cakephp/ap...', 106, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
