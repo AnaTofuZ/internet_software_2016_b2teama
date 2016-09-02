@@ -103,17 +103,17 @@ class ExamplesController extends AppController {
 	 $cookieValue = $this -> Cookie -> read('id'); //Cookieの値を読み込む
     $user = $this ->User->read(null,$cookieValue); //DBの中のレコードをuser定義
 
-    if(isset($cookieValue)){
-        if($this->Auth->login($user['User'])){
+    if(isset($cookieValue)){ //Cookieがあったら
+        if($this->Auth->login($user['User'])){  //ログイン処理を呼び出して,ログイン出来れば
 //        $user = $this->Auth->user();
-        return  $this->redirect($this->Auth->redirect());
-        } 
+        return  $this->redirect($this->Auth->redirect()); //次の画面に移動せよ
+        }
     }else{
 	 //$user = $this ->User->read(null,$cookieValue); //DBの中のレコードをuser定義
 
     // ログイン済みであれば index に遷移
     if(isset($user['id'])){
-      return $this->redirect($this->Auth->redirect());
+      return $this->redirect($this->Auth->redirect()); //Twitter認証にぶっ飛ぶ
     }
 
     }
