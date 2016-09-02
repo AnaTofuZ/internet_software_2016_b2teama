@@ -105,10 +105,9 @@ class ExamplesController extends AppController {
 
     if(isset($cookieValue)){
         if($this->Auth->login($user['User'])){
-                                //if($this->Auth->login($user['User'])){
-        $user = $this->Auth->user();
+//        $user = $this->Auth->user();
         return  $this->redirect($this->Auth->redirect());
-        }
+        } 
     }else{
 	 //$user = $this ->User->read(null,$cookieValue); //DBの中のレコードをuser定義
 
