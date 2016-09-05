@@ -650,3 +650,279 @@ Stack Trace:
 #4 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ExamplesController), Object(CakeRequest))
 #5 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #6 {main}
+2016-09-02 22:06:47 Error: [CakeException] Invalid key for decrypt(), key must be at least 256 bits (32 bytes) long.
+Request URL: /cakephp/examples/login
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Utility/Security.php(386): Security::_checkKey(NULL, 'decrypt()')
+#1 /src/cakephp/app/Controller/ExamplesController.php(112): Security::decrypt('e6a6cac9a07bcfa...', NULL)
+#2 [internal function]: ExamplesController->login()
+#3 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ExamplesController), Array)
+#4 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#5 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ExamplesController), Object(CakeRequest))
+#6 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2016-09-04 02:11:14 Error: [MissingControllerException] Controller class MyadminController could not be found.
+Exception Attributes: array (
+  'class' => 'MyadminController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/myadmin
+Stack Trace:
+#0 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-05 15:44:00 Error: Fatal Error (1): Call to a member function create() on a non-object in [/src/cakephp/app/View/Examples/index.ctp, line 31]
+2016-09-05 15:44:00 Error: [FatalErrorException] Call to a member function create() on a non-object
+Request URL: /cakephp/examples/index
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/src/cakephp/ap...', 31)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/src/cakephp/ap...', 31, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/src/cakephp/ap...', 31, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-05 15:44:17 Error: [SocketException] stream_socket_client(): SSL: connection timeout
+stream_socket_client(): Failed to enable crypto
+stream_socket_client(): unable to connect to ssl://api.twitter.com:443 (Unknown error)
+Request URL: /cakephp/examples/index
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Network/CakeSocket.php(347): CakeSocket->connect()
+#1 /src/cakephp/lib/Cake/Network/Http/HttpSocket.php(377): CakeSocket->write('GET /1.1/status...')
+#2 /src/cakephp/lib/Cake/Network/Http/HttpSocket.php(466): HttpSocket->request(Array)
+#3 /src/cakephp/app/Vendor/OAuth/OAuthClient.php(117): HttpSocket->get('https://api.twi...')
+#4 /src/cakephp/app/Vendor/OAuth/OAuthClient.php(35): OAuthClient->doGet('https://api.twi...')
+#5 /src/cakephp/app/Controller/ExamplesController.php(152): OAuthClient->get('1014888828-21sB...', 'OB9sO8oO1sY0tYV...', 'https://api.twi...', Array)
+#6 [internal function]: ExamplesController->index()
+#7 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ExamplesController), Array)
+#8 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ExamplesController), Object(CakeRequest))
+#10 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-09-05 16:08:05 Error: [MissingActionException] Action ExamplesController::posts() could not be found.
+Exception Attributes: array (
+  'controller' => 'ExamplesController',
+  'action' => 'posts',
+)
+Request URL: /cakephp/examples/posts
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ExamplesController), Object(CakeRequest))
+#2 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-09-05 16:38:10 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'title' cannot be null
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(468): PDOStatement->execute(Array)
+#1 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(434): DboSource->_execute('INSERT INTO `ca...', Array)
+#2 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(1026): DboSource->execute('INSERT INTO `ca...')
+#3 /src/cakephp/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Post), Array, Array)
+#4 /src/cakephp/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /src/cakephp/app/Controller/PostsController.php(29): Model->save(Array)
+#6 [internal function]: PostsController->add()
+#7 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#8 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#10 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-09-05 16:40:24 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'body' cannot be null
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(468): PDOStatement->execute(Array)
+#1 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(434): DboSource->_execute('INSERT INTO `ca...', Array)
+#2 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(1026): DboSource->execute('INSERT INTO `ca...')
+#3 /src/cakephp/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Post), Array, Array)
+#4 /src/cakephp/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /src/cakephp/app/Controller/PostsController.php(29): Model->save(Array)
+#6 [internal function]: PostsController->add()
+#7 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#8 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#10 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-09-05 17:22:19 Error: Fatal Error (1): Cannot use object of type Post as array in [/src/cakephp/app/Controller/PostsController.php, line 24]
+2016-09-05 17:22:19 Error: [FatalErrorException] Cannot use object of type Post as array
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Cannot use obje...', '/src/cakephp/ap...', 24)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot use obje...', '/src/cakephp/ap...', 24, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Cannot use obje...', '/src/cakephp/ap...', 24, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-05 17:22:32 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'body' cannot be null
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(468): PDOStatement->execute(Array)
+#1 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(434): DboSource->_execute('INSERT INTO `ca...', Array)
+#2 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(1026): DboSource->execute('INSERT INTO `ca...')
+#3 /src/cakephp/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Post), Array, Array)
+#4 /src/cakephp/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /src/cakephp/app/Controller/PostsController.php(29): Model->save(Array)
+#6 [internal function]: PostsController->add()
+#7 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#8 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#10 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-09-05 17:23:03 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'body' cannot be null
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(468): PDOStatement->execute(Array)
+#1 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(434): DboSource->_execute('INSERT INTO `ca...', Array)
+#2 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(1026): DboSource->execute('INSERT INTO `ca...')
+#3 /src/cakephp/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Post), Array, Array)
+#4 /src/cakephp/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /src/cakephp/app/Controller/PostsController.php(29): Model->save(Array)
+#6 [internal function]: PostsController->add()
+#7 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#8 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#10 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-09-05 17:25:45 Error: Fatal Error (64): Can't use method return value in write context in [/src/cakephp/app/Controller/PostsController.php, line 23]
+2016-09-05 17:25:45 Error: [FatalErrorException] Can't use method return value in write context
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Can't use metho...', '/src/cakephp/ap...', 23)
+#1 [internal function]: ErrorHandler::handleError(64, 'Can't use metho...', '/src/cakephp/ap...', 23, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 64, 'Can't use metho...', '/src/cakephp/ap...', 23, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-05 17:25:46 Error: Fatal Error (64): Can't use method return value in write context in [/src/cakephp/app/Controller/PostsController.php, line 23]
+2016-09-05 17:25:46 Error: [FatalErrorException] Can't use method return value in write context
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Can't use metho...', '/src/cakephp/ap...', 23)
+#1 [internal function]: ErrorHandler::handleError(64, 'Can't use metho...', '/src/cakephp/ap...', 23, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 64, 'Can't use metho...', '/src/cakephp/ap...', 23, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-05 17:26:11 Error: Fatal Error (4): syntax error, unexpected '{' in [/src/cakephp/app/Controller/PostsController.php, line 23]
+2016-09-05 17:26:11 Error: [FatalErrorException] syntax error, unexpected '{'
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/src/cakephp/ap...', 23)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/src/cakephp/ap...', 23, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/src/cakephp/ap...', 23, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-05 17:26:24 Error: Fatal Error (4): syntax error, unexpected '{' in [/src/cakephp/app/Controller/PostsController.php, line 23]
+2016-09-05 17:26:24 Error: [FatalErrorException] syntax error, unexpected '{'
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/src/cakephp/ap...', 23)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/src/cakephp/ap...', 23, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/src/cakephp/ap...', 23, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-05 17:26:26 Error: Fatal Error (4): syntax error, unexpected '{' in [/src/cakephp/app/Controller/PostsController.php, line 23]
+2016-09-05 17:26:26 Error: [FatalErrorException] syntax error, unexpected '{'
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/src/cakephp/ap...', 23)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/src/cakephp/ap...', 23, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/src/cakephp/ap...', 23, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-05 17:26:29 Error: Fatal Error (4): syntax error, unexpected '{' in [/src/cakephp/app/Controller/PostsController.php, line 23]
+2016-09-05 17:26:29 Error: [FatalErrorException] syntax error, unexpected '{'
+Request URL: /cakephp/posts/
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/src/cakephp/ap...', 23)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/src/cakephp/ap...', 23, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/src/cakephp/ap...', 23, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-05 17:26:54 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'body' cannot be null
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(468): PDOStatement->execute(Array)
+#1 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(434): DboSource->_execute('INSERT INTO `ca...', Array)
+#2 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(1026): DboSource->execute('INSERT INTO `ca...')
+#3 /src/cakephp/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Post), Array, Array)
+#4 /src/cakephp/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /src/cakephp/app/Controller/PostsController.php(29): Model->save(Array)
+#6 [internal function]: PostsController->add()
+#7 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#8 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#10 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-09-05 17:30:36 Error: [MissingControllerException] Controller class MyadminController could not be found.
+Exception Attributes: array (
+  'class' => 'MyadminController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/Myadmin
+Stack Trace:
+#0 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-05 18:33:01 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'body' cannot be null
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(468): PDOStatement->execute(Array)
+#1 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(434): DboSource->_execute('INSERT INTO `ca...', Array)
+#2 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(1026): DboSource->execute('INSERT INTO `ca...')
+#3 /src/cakephp/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Post), Array, Array)
+#4 /src/cakephp/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /src/cakephp/app/Controller/PostsController.php(29): Model->save(Array)
+#6 [internal function]: PostsController->add()
+#7 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#8 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#10 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-09-05 18:34:05 Error: Fatal Error (64): Can't use method return value in write context in [/src/cakephp/app/Controller/PostsController.php, line 23]
+2016-09-05 18:34:05 Error: [FatalErrorException] Can't use method return value in write context
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Can't use metho...', '/src/cakephp/ap...', 23)
+#1 [internal function]: ErrorHandler::handleError(64, 'Can't use metho...', '/src/cakephp/ap...', 23, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 64, 'Can't use metho...', '/src/cakephp/ap...', 23, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-05 18:34:38 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'body' cannot be null
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(468): PDOStatement->execute(Array)
+#1 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(434): DboSource->_execute('INSERT INTO `ca...', Array)
+#2 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(1026): DboSource->execute('INSERT INTO `ca...')
+#3 /src/cakephp/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Post), Array, Array)
+#4 /src/cakephp/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /src/cakephp/app/Controller/PostsController.php(30): Model->save(Array)
+#6 [internal function]: PostsController->add()
+#7 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#8 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#10 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-09-05 18:41:05 Error: [MissingViewException] View file "Posts/add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Posts/add.ctp',
+)
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /src/cakephp/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#2 /src/cakephp/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#4 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-09-05 18:41:58 Error: [MissingViewException] View file "Posts/add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Posts/add.ctp',
+)
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /src/cakephp/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#2 /src/cakephp/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#4 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}

@@ -18,21 +18,6 @@
 			$timeline['text'].'<br>';
 
 	}
-	echo '<tr>';
-	echo '<table><tr><th>id</th><th>タイトル</th><th>内容</th><th>作成日</th><th>変更日</th></tr>';
-    foreach($posts as $post){
-      echo '<tr>';
-      echo '<td>'.$post['Post']['id'].'</td>';
-      echo '<td>'.$post['Post']['title'].'</td>';
-      echo '<td>'.$post['Post']['body'].'</td>';
-      echo '<td>'.$post['Post']['created'].'</td>';
-      echo '<td>'.$post['Post']['modified'].'</td>';
-      echo '</tr></tr>';
-
-
-    }
-
-
         echo '</table>';
         echo $this->Html->link('ログアウト',array('action' => 'logout'));
 
