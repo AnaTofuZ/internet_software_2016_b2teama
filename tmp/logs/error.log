@@ -926,3 +926,140 @@ Stack Trace:
 #3 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
 #4 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
+2016-09-08 08:32:36 Error: [SocketException] php_network_getaddresses: getaddrinfo failed: Name or service not known
+Request URL: /cakephp/examples/index
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Network/CakeSocket.php(347): CakeSocket->connect()
+#1 /src/cakephp/lib/Cake/Network/Http/HttpSocket.php(377): CakeSocket->write('GET /1.1/status...')
+#2 /src/cakephp/lib/Cake/Network/Http/HttpSocket.php(466): HttpSocket->request(Array)
+#3 /src/cakephp/app/Vendor/OAuth/OAuthClient.php(117): HttpSocket->get('https://api.twi...')
+#4 /src/cakephp/app/Vendor/OAuth/OAuthClient.php(35): OAuthClient->doGet('https://api.twi...')
+#5 /src/cakephp/app/Controller/ExamplesController.php(152): OAuthClient->get('1014888828-21sB...', 'OB9sO8oO1sY0tYV...', 'https://api.twi...', Array)
+#6 [internal function]: ExamplesController->index()
+#7 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ExamplesController), Array)
+#8 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ExamplesController), Object(CakeRequest))
+#10 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-09-08 08:35:21 Error: Fatal Error (1): Call to a member function find() on a non-object in [/src/cakephp/app/Controller/PostsController.php, line 27]
+2016-09-08 08:35:21 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /cakephp/posts/index
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/src/cakephp/ap...', 27)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/src/cakephp/ap...', 27, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/src/cakephp/ap...', 27, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-08 08:35:43 Error: [MissingViewException] View file "Posts/add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Posts/add.ctp',
+)
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /src/cakephp/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#2 /src/cakephp/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#4 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-09-08 08:41:09 Error: Fatal Error (1): Call to a member function find() on a non-object in [/src/cakephp/app/Controller/PostsController.php, line 27]
+2016-09-08 08:41:09 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /cakephp/posts/
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/src/cakephp/ap...', 27)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/src/cakephp/ap...', 27, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/src/cakephp/ap...', 27, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-08 08:41:17 Error: Fatal Error (1): Call to a member function find() on a non-object in [/src/cakephp/app/Controller/PostsController.php, line 27]
+2016-09-08 08:41:17 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /cakephp/posts
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/src/cakephp/ap...', 27)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/src/cakephp/ap...', 27, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/src/cakephp/ap...', 27, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-08 08:41:40 Error: Fatal Error (1): Call to a member function find() on a non-object in [/src/cakephp/app/Controller/PostsController.php, line 27]
+2016-09-08 08:41:40 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /cakephp/posts/index
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/src/cakephp/ap...', 27)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/src/cakephp/ap...', 27, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/src/cakephp/ap...', 27, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-08 08:52:22 Error: Fatal Error (1): Call to a member function find() on a non-object in [/src/cakephp/app/Controller/PostsController.php, line 28]
+2016-09-08 08:52:22 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /cakephp/posts/index
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/src/cakephp/ap...', 28)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/src/cakephp/ap...', 28, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/src/cakephp/ap...', 28, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-08 08:52:25 Error: Fatal Error (1): Call to a member function find() on a non-object in [/src/cakephp/app/Controller/PostsController.php, line 28]
+2016-09-08 08:52:25 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /cakephp/posts/
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/src/cakephp/ap...', 28)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/src/cakephp/ap...', 28, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/src/cakephp/ap...', 28, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-08 08:52:27 Error: Fatal Error (1): Call to a member function find() on a non-object in [/src/cakephp/app/Controller/PostsController.php, line 28]
+2016-09-08 08:52:27 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /cakephp/posts
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/src/cakephp/ap...', 28)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/src/cakephp/ap...', 28, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/src/cakephp/ap...', 28, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-08 08:54:52 Error: Fatal Error (1): Call to a member function find() on a non-object in [/src/cakephp/app/Controller/PostsController.php, line 28]
+2016-09-08 08:54:52 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /cakephp/posts
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/src/cakephp/ap...', 28)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/src/cakephp/ap...', 28, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/src/cakephp/ap...', 28, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-08 08:59:51 Error: Fatal Error (1): Call to a member function find() on a non-object in [/src/cakephp/app/Controller/PostsController.php, line 28]
+2016-09-08 08:59:51 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /cakephp/posts
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/src/cakephp/ap...', 28)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/src/cakephp/ap...', 28, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/src/cakephp/ap...', 28, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-08 09:03:56 Error: [MissingTableException] Table post,users for model Post,User was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'post,users',
+  'class' => 'Post,User',
+  'ds' => 'default',
+)
+Request URL: /cakephp/posts
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Model/Model.php(3653): Model->setSource('post,users')
+#1 /src/cakephp/lib/Cake/Model/Model.php(1387): Model->getDataSource()
+#2 /src/cakephp/lib/Cake/Model/Model.php(1483): Model->schema()
+#3 /src/cakephp/lib/Cake/Model/Model.php(1470): Model->hasField('title', false)
+#4 /src/cakephp/lib/Cake/Model/Model.php(907): Model->hasField(Array)
+#5 /src/cakephp/lib/Cake/Controller/Scaffold.php(130): Model->__get('displayField')
+#6 /src/cakephp/lib/Cake/Controller/Controller.php(536): Scaffold->__construct(Object(PostsController), Object(CakeRequest))
+#7 /src/cakephp/lib/Cake/Controller/Controller.php(495): Controller->_getScaffold(Object(CakeRequest))
+#8 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#10 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
