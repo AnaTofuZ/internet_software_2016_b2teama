@@ -1353,3 +1353,57 @@ Stack Trace:
 #3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2016-09-08 15:18:15 Error: [MissingHelperException] Helper class postHelper could not be found.
+Exception Attributes: array (
+  'class' => 'postHelper',
+  'plugin' => false,
+)
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('post')
+#1 /src/cakephp/lib/Cake/View/View.php(858): HelperCollection->__isset('post')
+#2 /src/cakephp/app/View/Posts/add.ctp(3): View->__get('post')
+#3 /src/cakephp/lib/Cake/View/View.php(971): include('/src/cakephp/ap...')
+#4 /src/cakephp/lib/Cake/View/View.php(933): View->_evaluate('/src/cakephp/ap...', Array)
+#5 /src/cakephp/lib/Cake/View/View.php(473): View->_render('/src/cakephp/ap...')
+#6 /src/cakephp/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#7 /src/cakephp/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#8 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#9 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2016-09-08 15:18:18 Error: [MissingHelperException] Helper class postHelper could not be found.
+Exception Attributes: array (
+  'class' => 'postHelper',
+  'plugin' => false,
+)
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('post')
+#1 /src/cakephp/lib/Cake/View/View.php(858): HelperCollection->__isset('post')
+#2 /src/cakephp/app/View/Posts/add.ctp(3): View->__get('post')
+#3 /src/cakephp/lib/Cake/View/View.php(971): include('/src/cakephp/ap...')
+#4 /src/cakephp/lib/Cake/View/View.php(933): View->_evaluate('/src/cakephp/ap...', Array)
+#5 /src/cakephp/lib/Cake/View/View.php(473): View->_render('/src/cakephp/ap...')
+#6 /src/cakephp/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#7 /src/cakephp/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#8 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#9 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2016-09-08 15:18:29 Error: [MissingHelperException] Helper class postHelper could not be found.
+Exception Attributes: array (
+  'class' => 'postHelper',
+  'plugin' => false,
+)
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('post')
+#1 /src/cakephp/lib/Cake/View/View.php(858): HelperCollection->__isset('post')
+#2 /src/cakephp/app/View/Posts/add.ctp(3): View->__get('post')
+#3 /src/cakephp/lib/Cake/View/View.php(971): include('/src/cakephp/ap...')
+#4 /src/cakephp/lib/Cake/View/View.php(933): View->_evaluate('/src/cakephp/ap...', Array)
+#5 /src/cakephp/lib/Cake/View/View.php(473): View->_render('/src/cakephp/ap...')
+#6 /src/cakephp/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#7 /src/cakephp/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#8 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#9 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}

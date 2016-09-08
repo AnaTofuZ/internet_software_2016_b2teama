@@ -8,6 +8,7 @@ class PostsController extends AppController {
    public $uses =array('Post');
 //利用するコンポーネント(プラグイン)を宣言。 Authはいらないかも
    public $components = array('Auth','Cookie','DebugKit.Toolbar');
+   public $helpers = array('Html','Form');
 /**
  * Scaffold
  *

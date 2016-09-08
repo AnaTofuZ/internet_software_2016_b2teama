@@ -1,6 +1,6 @@
 <?php
 
-//print_r($posts);
+print_r($posts);
 
 	foreach($posts as $post){
 		echo $post['Post']['title']."<br>";
