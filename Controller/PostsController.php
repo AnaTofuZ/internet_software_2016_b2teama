@@ -5,7 +5,7 @@ App::uses('AppController', 'Controller');
  */
 class PostsController extends AppController {
 //念の為にUserモデルを使用宣言。$scaffoldを使った場合はarray('Post')じゃないとダメ
-   public $uses =array('Post','User');
+   public $uses =array('Post');
 //利用するコンポーネント(プラグイン)を宣言。 Authはいらないかも
    public $components = array('Auth','Cookie','DebugKit.Toolbar');
 /**
@@ -16,12 +16,12 @@ class PostsController extends AppController {
 //public $scaffold;
 
 //アクション前処理(そこまで書かなくても良い?)
-   /*public function beforefilter(){
+   public function beforefilter(){
 
       //post処理終了後にindexに遷移
       $this->Post->postRedirect = array('controller' => 'posts','action' => 'index');
       parent::beforeFilter();
-   } */
+   }
 
     public function index()
     {

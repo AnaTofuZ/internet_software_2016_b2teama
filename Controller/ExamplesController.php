@@ -5,9 +5,9 @@ App::import('Vendor','OAuth/OAuthClient');
 
 class ExamplesController extends AppController {
   // Examples コントローラで用いる他のモデル(テーブル)
-  public $uses = array('User', 'Post');
+  public $uses = array('User','Post');
   // 利用するコンポーネント(プラグイン)
-  public $components = array('Auth', 'Cookie', 'DebugKit.Toolbar');
+  public $components = array('Auth','Cookie','DebugKit.Toolbar');
 
   // コントローラ内の各アクション(関数)を実行する前に処理
   public function beforefilter(){
