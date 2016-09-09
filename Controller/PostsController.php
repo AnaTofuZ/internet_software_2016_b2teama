@@ -6,9 +6,9 @@ App::uses('AppController', 'Controller');
 class PostsController extends AppController {
 //念の為にUserモデルを使用宣言。$scaffoldを使った場合はarray('Post')じゃないとダメ
    public $uses =array('Post');
-//利用するコンポーネント(プラグイン)を宣言。 Authはいらないかも
-   public $components = array('Auth','Cookie','DebugKit.Toolbar');
-   public $helpers = array('Html','Form');
+//利用するコンポーネント(プラグイン)を宣言。
+   public $components = array('Auth','Cookie','DebugKit.Toolbar','Security');
+   public $helpers = array('Html','Form','Flash');
 /**
  * Scaffold
  *
@@ -32,15 +32,17 @@ class PostsController extends AppController {
 
     public function add(){
       if($this->request->is('post')){
+         $posts=$this->Post->find('all');
          $this->Post->create();
          if($this->Post->save($this->request->data)){
-         $posts["Post"]["id"] = $this->post["Post"]["id"];
-         $posts["Post"]["title"] = $this->post["Post"]["title"];
+         $post["Post"]["id"] = $this->post["Post"]["id"];
+         $post["Post"]["title"] = $this->post["Post"]["title"];
          $post["Post"]["body"] = $this->post["Post"]["body"];
          $post["Post"]["created"] = $this->post["Post"]["created"];
          $post["Post"]["modified"] = $this->post["Post"]["modified"];
          $this->Post->save($post);}
-         $this->Session->setFlash(_('Succesed post.'),'default');
+          $this->Session->setFlash(_('Succesed post.'),'default');
+         return $this->redirect(array('action' => 'index'));
       }else{
          $this->Session->setFlash(__('Post don\'t posted .'), 'default', array('class'=>'error-message'), 'auth');
       }

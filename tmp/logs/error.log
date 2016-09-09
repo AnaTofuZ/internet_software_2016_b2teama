@@ -1436,3 +1436,366 @@ Stack Trace:
 #3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2016-09-09 18:01:55 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'title' cannot be null
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(468): PDOStatement->execute(Array)
+#1 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(434): DboSource->_execute('INSERT INTO `ca...', Array)
+#2 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(1026): DboSource->execute('INSERT INTO `ca...')
+#3 /src/cakephp/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Post), Array, Array)
+#4 /src/cakephp/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /src/cakephp/app/Controller/PostsController.php(42): Model->save(Array)
+#6 [internal function]: PostsController->add()
+#7 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#8 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#10 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-09-09 18:03:26 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'title' cannot be null
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(468): PDOStatement->execute(Array)
+#1 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(434): DboSource->_execute('INSERT INTO `ca...', Array)
+#2 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(1026): DboSource->execute('INSERT INTO `ca...')
+#3 /src/cakephp/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Post), Array, Array)
+#4 /src/cakephp/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /src/cakephp/app/Controller/PostsController.php(42): Model->save(Array)
+#6 [internal function]: PostsController->add()
+#7 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#8 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#10 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-09-09 18:04:02 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'title' cannot be null
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(468): PDOStatement->execute(Array)
+#1 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(434): DboSource->_execute('INSERT INTO `ca...', Array)
+#2 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(1026): DboSource->execute('INSERT INTO `ca...')
+#3 /src/cakephp/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Post), Array, Array)
+#4 /src/cakephp/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /src/cakephp/app/Controller/PostsController.php(42): Model->save(Array)
+#6 [internal function]: PostsController->add()
+#7 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#8 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#10 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-09-09 18:06:49 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'title' cannot be null
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(468): PDOStatement->execute(Array)
+#1 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(434): DboSource->_execute('INSERT INTO `ca...', Array)
+#2 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(1026): DboSource->execute('INSERT INTO `ca...')
+#3 /src/cakephp/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Post), Array, Array)
+#4 /src/cakephp/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /src/cakephp/app/Controller/PostsController.php(42): Model->save(Array)
+#6 [internal function]: PostsController->add()
+#7 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#8 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#10 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-09-09 18:08:15 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'title' cannot be null
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(468): PDOStatement->execute(Array)
+#1 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(434): DboSource->_execute('INSERT INTO `ca...', Array)
+#2 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(1026): DboSource->execute('INSERT INTO `ca...')
+#3 /src/cakephp/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Post), Array, Array)
+#4 /src/cakephp/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /src/cakephp/app/Controller/PostsController.php(42): Model->save(Array)
+#6 [internal function]: PostsController->add()
+#7 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#8 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#10 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-09-09 18:09:59 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'title' cannot be null
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(468): PDOStatement->execute(Array)
+#1 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(434): DboSource->_execute('INSERT INTO `ca...', Array)
+#2 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(1026): DboSource->execute('INSERT INTO `ca...')
+#3 /src/cakephp/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Post), Array, Array)
+#4 /src/cakephp/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /src/cakephp/app/Controller/PostsController.php(42): Model->save(Array)
+#6 [internal function]: PostsController->add()
+#7 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#8 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#10 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-09-09 18:14:43 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'body' cannot be null
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(468): PDOStatement->execute(Array)
+#1 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(434): DboSource->_execute('INSERT INTO `ca...', Array)
+#2 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(1026): DboSource->execute('INSERT INTO `ca...')
+#3 /src/cakephp/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Post), Array, Array)
+#4 /src/cakephp/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /src/cakephp/app/Controller/PostsController.php(42): Model->save(Array)
+#6 [internal function]: PostsController->add()
+#7 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#8 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#10 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-09-09 20:15:18 Error: [MissingActionException] Action PostsController::post() could not be found.
+Exception Attributes: array (
+  'controller' => 'PostsController',
+  'action' => 'post',
+)
+Request URL: /cakephp/posts/post
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#2 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-09-09 20:21:31 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'title' cannot be null
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(468): PDOStatement->execute(Array)
+#1 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(434): DboSource->_execute('INSERT INTO `ca...', Array)
+#2 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(1026): DboSource->execute('INSERT INTO `ca...')
+#3 /src/cakephp/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Post), Array, Array)
+#4 /src/cakephp/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /src/cakephp/app/Controller/PostsController.php(42): Model->save(Array)
+#6 [internal function]: PostsController->add()
+#7 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#8 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#10 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-09-09 20:22:47 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'title' cannot be null
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(468): PDOStatement->execute(Array)
+#1 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(434): DboSource->_execute('INSERT INTO `ca...', Array)
+#2 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(1026): DboSource->execute('INSERT INTO `ca...')
+#3 /src/cakephp/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Post), Array, Array)
+#4 /src/cakephp/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /src/cakephp/app/Controller/PostsController.php(42): Model->save(Array)
+#6 [internal function]: PostsController->add()
+#7 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#8 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#10 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-09-09 20:27:25 Error: [BadRequestException] The request has been black-holed
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Controller/Component/SecurityComponent.php(243): SecurityComponent->blackHole(Object(PostsController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(PostsController))
+#2 /src/cakephp/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 /src/cakephp/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#5 /src/cakephp/lib/Cake/Controller/Controller.php(678): CakeEventManager->dispatch(Object(CakeEvent))
+#6 /src/cakephp/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#7 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#8 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2016-09-09 20:27:42 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'title' cannot be null
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(468): PDOStatement->execute(Array)
+#1 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(434): DboSource->_execute('INSERT INTO `ca...', Array)
+#2 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(1026): DboSource->execute('INSERT INTO `ca...')
+#3 /src/cakephp/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Post), Array, Array)
+#4 /src/cakephp/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /src/cakephp/app/Controller/PostsController.php(42): Model->save(Array)
+#6 [internal function]: PostsController->add()
+#7 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#8 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#10 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-09-09 20:27:46 Error: [BadRequestException] The request has been black-holed
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Controller/Component/SecurityComponent.php(243): SecurityComponent->blackHole(Object(PostsController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(PostsController))
+#2 /src/cakephp/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 /src/cakephp/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#5 /src/cakephp/lib/Cake/Controller/Controller.php(678): CakeEventManager->dispatch(Object(CakeEvent))
+#6 /src/cakephp/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#7 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#8 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2016-09-09 20:30:10 Error: [MissingActionException] Action PostsController::post() could not be found.
+Exception Attributes: array (
+  'controller' => 'PostsController',
+  'action' => 'post',
+)
+Request URL: /cakephp/posts/post
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#2 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-09-09 20:30:25 Error: [MissingActionException] Action PostsController::post() could not be found.
+Exception Attributes: array (
+  'controller' => 'PostsController',
+  'action' => 'post',
+)
+Request URL: /cakephp/posts/post
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#2 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-09-09 20:30:31 Error: [BadRequestException] The request has been black-holed
+Request URL: /cakephp/posts/post
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Controller/Component/SecurityComponent.php(243): SecurityComponent->blackHole(Object(PostsController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(PostsController))
+#2 /src/cakephp/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 /src/cakephp/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#5 /src/cakephp/lib/Cake/Controller/Controller.php(678): CakeEventManager->dispatch(Object(CakeEvent))
+#6 /src/cakephp/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#7 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#8 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2016-09-09 20:30:34 Error: [BadRequestException] The request has been black-holed
+Request URL: /cakephp/posts/post
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Controller/Component/SecurityComponent.php(243): SecurityComponent->blackHole(Object(PostsController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(PostsController))
+#2 /src/cakephp/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 /src/cakephp/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#5 /src/cakephp/lib/Cake/Controller/Controller.php(678): CakeEventManager->dispatch(Object(CakeEvent))
+#6 /src/cakephp/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#7 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#8 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2016-09-09 20:39:09 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'title' cannot be null
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(468): PDOStatement->execute(Array)
+#1 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(434): DboSource->_execute('INSERT INTO `ca...', Array)
+#2 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(1026): DboSource->execute('INSERT INTO `ca...')
+#3 /src/cakephp/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Post), Array, Array)
+#4 /src/cakephp/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /src/cakephp/app/Controller/PostsController.php(42): Model->save(Array)
+#6 [internal function]: PostsController->add()
+#7 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#8 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#10 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-09-09 20:39:19 Error: [BadRequestException] The request has been black-holed
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Controller/Component/SecurityComponent.php(243): SecurityComponent->blackHole(Object(PostsController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(PostsController))
+#2 /src/cakephp/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 /src/cakephp/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#5 /src/cakephp/lib/Cake/Controller/Controller.php(678): CakeEventManager->dispatch(Object(CakeEvent))
+#6 /src/cakephp/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#7 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#8 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2016-09-09 20:50:25 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'title' cannot be null
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(468): PDOStatement->execute(Array)
+#1 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(434): DboSource->_execute('INSERT INTO `ca...', Array)
+#2 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(1026): DboSource->execute('INSERT INTO `ca...')
+#3 /src/cakephp/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Post), Array, Array)
+#4 /src/cakephp/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /src/cakephp/app/Controller/PostsController.php(42): Model->save(Array)
+#6 [internal function]: PostsController->add()
+#7 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#8 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#10 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-09-09 20:55:18 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'title' cannot be null
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(468): PDOStatement->execute(Array)
+#1 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(434): DboSource->_execute('INSERT INTO `ca...', Array)
+#2 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(1026): DboSource->execute('INSERT INTO `ca...')
+#3 /src/cakephp/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Post), Array, Array)
+#4 /src/cakephp/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /src/cakephp/app/Controller/PostsController.php(42): Model->save(Array)
+#6 [internal function]: PostsController->add()
+#7 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#8 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#10 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-09-09 21:09:13 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'title' cannot be null
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(468): PDOStatement->execute(Array)
+#1 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(434): DboSource->_execute('INSERT INTO `ca...', Array)
+#2 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(1026): DboSource->execute('INSERT INTO `ca...')
+#3 /src/cakephp/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Post), Array, Array)
+#4 /src/cakephp/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /src/cakephp/app/Controller/PostsController.php(42): Model->save(Array)
+#6 [internal function]: PostsController->add()
+#7 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#8 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#10 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-09-09 21:13:54 Error: Fatal Error (1): Call to a member function find() on a non-object in [/src/cakephp/app/Controller/PostsController.php, line 35]
+2016-09-09 21:13:54 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/src/cakephp/ap...', 35)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/src/cakephp/ap...', 35, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/src/cakephp/ap...', 35, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-09 21:14:46 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'title' cannot be null
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(468): PDOStatement->execute(Array)
+#1 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(434): DboSource->_execute('INSERT INTO `ca...', Array)
+#2 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(1026): DboSource->execute('INSERT INTO `ca...')
+#3 /src/cakephp/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Post), Array, Array)
+#4 /src/cakephp/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /src/cakephp/app/Controller/PostsController.php(43): Model->save(Array)
+#6 [internal function]: PostsController->add()
+#7 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#8 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#10 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-09-09 21:14:57 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'title' cannot be null
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(468): PDOStatement->execute(Array)
+#1 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(434): DboSource->_execute('INSERT INTO `ca...', Array)
+#2 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(1026): DboSource->execute('INSERT INTO `ca...')
+#3 /src/cakephp/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Post), Array, Array)
+#4 /src/cakephp/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /src/cakephp/app/Controller/PostsController.php(43): Model->save(Array)
+#6 [internal function]: PostsController->add()
+#7 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#8 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#10 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-09-09 21:15:28 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'title' cannot be null
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(468): PDOStatement->execute(Array)
+#1 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(434): DboSource->_execute('INSERT INTO `ca...', Array)
+#2 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(1026): DboSource->execute('INSERT INTO `ca...')
+#3 /src/cakephp/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Post), Array, Array)
+#4 /src/cakephp/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /src/cakephp/app/Controller/PostsController.php(43): Model->save(Array)
+#6 [internal function]: PostsController->add()
+#7 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#8 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#10 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
