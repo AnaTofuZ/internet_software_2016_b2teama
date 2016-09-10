@@ -42,7 +42,7 @@ class PostsController extends AppController {
          $post["Post"]["modified"] = $this->post["Post"]["modified"];
          $this->Post->save($post);}
           $this->Session->setFlash(_('Succesed post.'),'default');
-         return $this->redirect(array('action' => 'index'));
+         //return $this->redirect(array('action' => 'index'));
       }else{
          $this->Session->setFlash(__('Post don\'t posted .'), 'default', array('class'=>'error-message'), 'auth');
       }

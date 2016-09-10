@@ -1799,3 +1799,44 @@ Stack Trace:
 #9 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
 #10 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #11 {main}
+2016-09-09 21:36:57 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'title' cannot be null
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(468): PDOStatement->execute(Array)
+#1 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(434): DboSource->_execute('INSERT INTO `ca...', Array)
+#2 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(1026): DboSource->execute('INSERT INTO `ca...')
+#3 /src/cakephp/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Post), Array, Array)
+#4 /src/cakephp/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /src/cakephp/app/Controller/PostsController.php(43): Model->save(Array)
+#6 [internal function]: PostsController->add()
+#7 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#8 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#10 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-09-09 21:37:04 Error: [BadRequestException] The request has been black-holed
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Controller/Component/SecurityComponent.php(243): SecurityComponent->blackHole(Object(PostsController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(PostsController))
+#2 /src/cakephp/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 /src/cakephp/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#5 /src/cakephp/lib/Cake/Controller/Controller.php(678): CakeEventManager->dispatch(Object(CakeEvent))
+#6 /src/cakephp/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#7 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#8 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2016-09-09 21:37:07 Error: [BadRequestException] The request has been black-holed
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Controller/Component/SecurityComponent.php(243): SecurityComponent->blackHole(Object(PostsController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(PostsController))
+#2 /src/cakephp/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 /src/cakephp/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#5 /src/cakephp/lib/Cake/Controller/Controller.php(678): CakeEventManager->dispatch(Object(CakeEvent))
+#6 /src/cakephp/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#7 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#8 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
