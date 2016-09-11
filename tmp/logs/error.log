@@ -1840,3 +1840,55 @@ Stack Trace:
 #7 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
 #8 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #9 {main}
+2016-09-11 16:33:11 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/users/login
+Stack Trace:
+#0 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-11 16:33:24 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/users/login
+Stack Trace:
+#0 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-11 16:33:32 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/users/login
+Stack Trace:
+#0 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-11 16:34:33 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'title' cannot be null
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(468): PDOStatement->execute(Array)
+#1 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(434): DboSource->_execute('INSERT INTO `ca...', Array)
+#2 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(1026): DboSource->execute('INSERT INTO `ca...')
+#3 /src/cakephp/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Post), Array, Array)
+#4 /src/cakephp/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /src/cakephp/app/Controller/PostsController.php(43): Model->save(Array)
+#6 [internal function]: PostsController->add()
+#7 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#8 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#10 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-09-11 16:35:43 Error: Fatal Error (1): Cannot use object of type Post as array in [/src/cakephp/app/Controller/PostsController.php, line 38]
+2016-09-11 16:35:43 Error: [FatalErrorException] Cannot use object of type Post as array
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Cannot use obje...', '/src/cakephp/ap...', 38)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot use obje...', '/src/cakephp/ap...', 38, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Cannot use obje...', '/src/cakephp/ap...', 38, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
