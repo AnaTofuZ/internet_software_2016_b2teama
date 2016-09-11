@@ -32,7 +32,6 @@ class PostsController extends AppController {
 
     public function add(){
       if($this->request->is('post')){
-         $post=$this->Post->find('all');
          $this->Post->create();
          if($this->Post->save($this->request->data)){
              $post = $this->Post->find('all'); //$postにPost->find出来た要素を入れる。これだとおｋ
