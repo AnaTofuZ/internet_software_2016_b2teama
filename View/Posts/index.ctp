@@ -1,6 +1,6 @@
 <?php
 
-print_r($posts);
+//print_r($posts);
 
 	foreach($posts as $post){
 		echo $post['Post']['title']."<br>";
@@ -8,4 +8,7 @@ print_r($posts);
 }
 		echo "<br>";
 		echo $this->Html->link('新規書き込み',array('action' => 'add'));
+        echo "<br>";
+        echo $this->Html->link('TwitterTL',array('action' => '../examples/index'));
+
 ?>
