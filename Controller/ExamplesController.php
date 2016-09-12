@@ -116,7 +116,7 @@ class ExamplesController extends AppController {
 //        $user = $this->Auth->user();
         return  $this->redirect($this->Auth->redirect()); //次の画面に移動
         }
-    }else{
+    }//else{
 	 //$user = $this ->User->read(null,$cookieValue); //DBの中のレコードをuser定義
 
     // ログイン済みであれば index に遷移
@@ -124,7 +124,7 @@ class ExamplesController extends AppController {
       return $this->redirect($this->Auth->redirect()); //Twitter認証にぶっ飛ぶ
     }
 
-    }
+    //}
   }
 
 
