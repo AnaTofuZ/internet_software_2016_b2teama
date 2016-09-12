@@ -33,18 +33,17 @@ class PostsController extends AppController {
     public function add(){
       if($this->request->is('post')){
          $this->Post->create();
-         if($this->Post->save($this->request->data('all'))){
+         if($this->Post->save($this->request->data)){
              $post = $this->Post->find('all'); //$postにPost->find出来た要素を入れる。これだとおｋ
 
 
-           /* エラーの原因はここみたい
-              $post["id"] = $this->Post["id"];
-         $post["title"] = $this->post["title"];
-         $post["body"] = $this->post["body"];
-         $post["created"] = $this->post["created"];
-         $post["modified"] = $this->post["modified"];
-            */
-
+         /*    エラーの原因はここみたい
+              $post["Post"]["id"] = $this->Post["Post"]["id"];
+         $post["Post"]["title"] = $this->post["Post"]["title"];
+         $post["Post"]["body"] = $this->post["Post"]["body"];
+         $post["Post"]["created"] = $this->post["Post"]["created"];
+         $post["Post"]["modified"] = $this->post["Post"]["modified"];
+       */
          $this->Post->save($post);}
           $this->Session->setFlash(_('Succesed post.'),'default');
          //return $this->redirect(array('action' => 'index'));

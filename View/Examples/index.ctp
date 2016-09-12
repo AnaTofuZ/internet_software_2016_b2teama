@@ -18,6 +18,7 @@
 			$timeline['text'].'<br>';
 
 	}
+	/*
 	echo '<tr>';
 	echo '<table><tr><th>id</th><th>タイトル</th><th>内容</th><th>作成日</th><th>変更日</th></tr>';
     foreach($posts as $post){
@@ -28,9 +29,13 @@
       echo '<td>'.$post['Post']['created'].'</td>';
       echo '<td>'.$post['Post']['modified'].'</td>';
       echo '</tr></tr>';
+    */
 
+	    echo '<tr>';
+        echo $this->Html->link('掲示板',array('action' => '../Posts/index'));
+        echo '</tr><br>';
 
-    }
+    //}
 
 
         echo '</table>';
