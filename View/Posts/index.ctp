@@ -9,6 +9,6 @@
 		echo "<br>";
 		echo $this->Html->link('新規書き込み',array('action' => 'add'));
         echo "<br>";
-        echo $this->Html->link('TwitterTL',array('action' => '../examples/index'));
+        echo $this->Html->link('TwitterTL',array('action' => '../examples/login'));
 
 ?>
