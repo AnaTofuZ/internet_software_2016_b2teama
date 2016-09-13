@@ -1,0 +1,6 @@
+# pack-refs with: peeled fully-peeled 
+cf00780977d560a112e73f5754014ab3c72be5c2 refs/heads/cookie
+e7ac5a45cb7a4c269ba4f7a39e538ed1a85f7a55 refs/heads/master
+0abfc53bae1b5ae6067f4f79ceb1c06d60e57492 refs/heads/test1
+66dc0bd0da5637e852ee3761ba373ab970c0b48a refs/remotes/origin/cookie
+f1884e09de9b35e20e0399fba2a53e7445ed3ef3 refs/remotes/origin/master
