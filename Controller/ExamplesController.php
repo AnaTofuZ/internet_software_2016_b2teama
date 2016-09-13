@@ -112,8 +112,22 @@ class ExamplesController extends AppController {
     $cookieValue = Security::decrypt($cookieValue,$key);//入ってない可能性もあるのでif文内で処理。再代入
     $user = $this ->User->read(null,$cookieValue); //DBの中のレコードをuser定義
 
-        if($this->Auth->login($user[$this->Auth->userModel])){  //ログイン処理を呼び出して,ログイン出来れば
-        return  $this->redirect($this->Auth->redirect()); //次の画面に移動
+
+        if(empty($user)) {
+          //CookieがあってもDB側で値が存在していなかった場合
+          $this->Session->setFlash(_('Cookieが不正です。再ログインしてください.'),'default');
+        }
+        else{
+          if ($this->Auth->login($user[$this->Auth->userModel])) {  //ログイン処理を呼び出して,ログイン出来れば
+            /*
+             * この時点で$userに保存されている情報は$print_r($user)すれば確認できるが
+             * Array ( [User] => Array ( [id] => 1014888828 [name] => 八雲アナグラ [screen_name] => AnaTofuZ
+             * [access_token_key] => 1014888828-21sBDgbmfnAi6gHv8CmXaT4ruIvM7u96ZZRL6Sx
+             * [access_token_secret] => OB9sO8oO1sY0tYVk9yVtiQmBlikbkkEXRhNU8qRZjNa1n ) )
+             * といったUsersテーブルから該当するフィールドを所持している
+             */
+              return $this->redirect($this->Auth->redirect()); //次の画面に移動
+          }
         }
     }
 
