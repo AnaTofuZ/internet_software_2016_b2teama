@@ -8,3 +8,4 @@
 	url = https://bitbucket.org/ineternetsoftware_2016_anagura/internet_software
 	fetch = +refs/*:refs/*
 	mirror = true
+	pushurl = git@github.com:shimitakax/internet_software_2016_b2teama.git
