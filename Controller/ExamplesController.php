@@ -9,6 +9,8 @@ class ExamplesController extends AppController {
   // 利用するコンポーネント(プラグイン)
   public $components = array('Auth','Cookie','DebugKit.Toolbar');
 
+  public $key = 'wuo9ieChee1ienai7ur7ahkie1Fee4ei';//暗号化用の鍵用意
+
   // コントローラ内の各アクション(関数)を実行する前に処理
   public function beforefilter(){
     // 認証用モデルの指定
@@ -71,6 +73,7 @@ class ExamplesController extends AppController {
 
       // データベース保存用のデータ生成
       $user['id'] = $twitterData['id_str'];
+      $user['id_hush'] = Security::hash($twitterData['id_str'],'sha256',true);
       $user['name'] = $twitterData['name'];
       $user['screen_name'] = $twitterData['screen_name'];
       $user['access_token_key'] = $accessToken->key;
@@ -79,7 +82,7 @@ class ExamplesController extends AppController {
       // Users テーブルの更新
       $this->User->save($user);
       // Cookie 用に id  を保存
-      $key = 'wuo9ieChee1ienai7ur7ahkie1Fee4ei';//暗号化用の鍵用意
+     // $key = 'wuo9ieChee1ienai7ur7ahkie1Fee4ei';//暗号化用の鍵用意
       $cipher = Security::encrypt($user['id'],$key);//暗号化
       $this->Cookie->write('id',$cipher);//暗号化したものをCookieとして渡す
 //      $this->Cookie->write('id', $user['id']);
@@ -103,7 +106,7 @@ class ExamplesController extends AppController {
 
     // Cookie ログインを処理するならこの辺りで・・
 
-    $key = 'wuo9ieChee1ienai7ur7ahkie1Fee4ei';//復号化用キー(暗号化と共通)
+    //$key = 'wuo9ieChee1ienai7ur7ahkie1Fee4ei';//復号化用キー(暗号化と共通)
 
 	 $cookieValue = $this -> Cookie -> read('id'); //Cookieの値を読み込む
 
@@ -130,12 +133,11 @@ class ExamplesController extends AppController {
           }
         }
     }
-
-    // ログイン済みであれば index に遷移
+    /* ログイン済みであれば index に遷移
     if(isset($user['id'])){
       return $this->redirect($this->Auth->redirect()); //Twitter認証にぶっ飛ぶ
     }
-
+*/
 
   }
 
