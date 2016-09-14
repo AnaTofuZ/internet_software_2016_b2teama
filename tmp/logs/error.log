@@ -2168,3 +2168,107 @@ Stack Trace:
 #3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2016-09-14 16:33:42 Error: [CakeException] Invalid key for encrypt(), key must be at least 256 bits (32 bytes) long.
+Request URL: /cakephp/examples/callback?oauth_token=kk8PhQAAAAAAhO19AAABVyeeo5s&oauth_verifier=RWfocfmMuGZHgf5kzZ1qTfA8sAzcRZOw
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Utility/Security.php(343): Security::_checkKey(NULL, 'encrypt()')
+#1 /src/cakephp/app/Controller/ExamplesController.php(79): Security::encrypt('1014888828-21sB...', NULL)
+#2 [internal function]: ExamplesController->callback()
+#3 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ExamplesController), Array)
+#4 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#5 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ExamplesController), Object(CakeRequest))
+#6 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2016-09-14 16:34:56 Error: [CakeException] Invalid key for encrypt(), key must be at least 256 bits (32 bytes) long.
+Request URL: /cakephp/examples/callback?oauth_token=UM5gNgAAAAAAhO19AAABVyefxIE&oauth_verifier=vsMaZ1XVdfPWHO6879Qf1tkbKpPxIBHB
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Utility/Security.php(343): Security::_checkKey(NULL, 'encrypt()')
+#1 /src/cakephp/app/Controller/ExamplesController.php(80): Security::encrypt('1014888828-21sB...', NULL)
+#2 [internal function]: ExamplesController->callback()
+#3 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ExamplesController), Array)
+#4 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#5 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ExamplesController), Object(CakeRequest))
+#6 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2016-09-14 16:36:34 Error: [CakeException] Invalid key for decrypt(), key must be at least 256 bits (32 bytes) long.
+Request URL: /cakephp/examples/login
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Utility/Security.php(386): Security::_checkKey(NULL, 'decrypt()')
+#1 /src/cakephp/app/Controller/ExamplesController.php(117): Security::decrypt('3b4af61bc59a261...', NULL)
+#2 [internal function]: ExamplesController->login()
+#3 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ExamplesController), Array)
+#4 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#5 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ExamplesController), Object(CakeRequest))
+#6 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2016-09-14 16:36:44 Error: [CakeException] Invalid key for decrypt(), key must be at least 256 bits (32 bytes) long.
+Request URL: /cakephp/examples/login
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Utility/Security.php(386): Security::_checkKey(NULL, 'decrypt()')
+#1 /src/cakephp/app/Controller/ExamplesController.php(117): Security::decrypt('3b4af61bc59a261...', NULL)
+#2 [internal function]: ExamplesController->login()
+#3 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ExamplesController), Array)
+#4 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#5 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ExamplesController), Object(CakeRequest))
+#6 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2016-09-14 18:02:22 Error: Fatal Error (4): syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')' in [/src/cakephp/app/Controller/ExamplesController.php, line 31]
+2016-09-14 18:02:22 Error: [FatalErrorException] syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')'
+Request URL: /cakephp/examples/twitter
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/src/cakephp/ap...', 31)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/src/cakephp/ap...', 31, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/src/cakephp/ap...', 31, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-14 19:59:39 Error: [CakeException] The data to decrypt cannot be empty.
+Request URL: /cakephp/examples/login
+Stack Trace:
+#0 /src/cakephp/app/Controller/ExamplesController.php(123): Security::decrypt(NULL, 'wuo9ieChee1iena...')
+#1 [internal function]: ExamplesController->login()
+#2 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ExamplesController), Array)
+#3 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ExamplesController), Object(CakeRequest))
+#5 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-09-14 20:03:39 Error: [CakeException] The data to decrypt cannot be empty.
+Request URL: /cakephp/examples/login
+Stack Trace:
+#0 /src/cakephp/app/Controller/ExamplesController.php(109): Security::decrypt(NULL, 'wuo9ieChee1iena...')
+#1 [internal function]: ExamplesController->login()
+#2 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ExamplesController), Array)
+#3 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ExamplesController), Object(CakeRequest))
+#5 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-09-14 20:05:56 Error: Fatal Error (4): syntax error, unexpected '[' in [/src/cakephp/app/Controller/ExamplesController.php, line 129]
+2016-09-14 20:05:56 Error: [FatalErrorException] syntax error, unexpected '['
+Request URL: /cakephp/examples/login
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/src/cakephp/ap...', 129)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/src/cakephp/ap...', 129, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/src/cakephp/ap...', 129, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-14 20:06:23 Error: Fatal Error (4): syntax error, unexpected ',' in [/src/cakephp/app/Controller/ExamplesController.php, line 129]
+2016-09-14 20:06:23 Error: [FatalErrorException] syntax error, unexpected ','
+Request URL: /cakephp/examples/login
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/src/cakephp/ap...', 129)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/src/cakephp/ap...', 129, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/src/cakephp/ap...', 129, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-14 20:06:36 Error: Fatal Error (4): syntax error, unexpected '[' in [/src/cakephp/app/Controller/ExamplesController.php, line 130]
+2016-09-14 20:06:36 Error: [FatalErrorException] syntax error, unexpected '['
+Request URL: /cakephp/examples/login
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/src/cakephp/ap...', 130)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/src/cakephp/ap...', 130, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/src/cakephp/ap...', 130, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

@@ -9,7 +9,6 @@ class ExamplesController extends AppController {
   // 利用するコンポーネント(プラグイン)
   public $components = array('Auth','Cookie','DebugKit.Toolbar');
 
-  public $key = 'wuo9ieChee1ienai7ur7ahkie1Fee4ei';//暗号化用の鍵用意
 
   // コントローラ内の各アクション(関数)を実行する前に処理
   public function beforefilter(){
@@ -23,6 +22,7 @@ class ExamplesController extends AppController {
     $this->Auth->logoutRedirect = array('controller' => 'examples','action' => 'logout');
     // ログイン処理を記述するアクション
     $this->Auth->loginAction = '/examples/login';
+
 
     // 認証で利用するフィールド名
     $this->Auth->fields = array(
@@ -71,9 +71,11 @@ class ExamplesController extends AppController {
       // json => 配列変換
       $twitterData = json_decode($json,true);
 
+      $key = 'wuo9ieChee1ienai7ur7ahkie1Fee4ei';//暗号化用の鍵用意
+
       // データベース保存用のデータ生成
       $user['id'] = $twitterData['id_str'];
-      $user['id_hush'] = Security::hash($twitterData['id_str'],'sha256',true);
+      $user['id_hush'] = (int)(Security::hash($twitterData['id_str'],'sha256',true));
       $user['name'] = $twitterData['name'];
       $user['screen_name'] = $twitterData['screen_name'];
       $user['access_token_key'] = Security::encrypt($accessToken->key,$key);//アクセストークン類を可逆暗号化
@@ -86,6 +88,9 @@ class ExamplesController extends AppController {
      // $cipher = Security::encrypt($user['id'],$key);//暗号化
       $this->Cookie->write('senbei',$user['id_hush']);//暗号化したものをCookieとして渡す->変更:ハッシュ値を送る
 //      $this->Cookie->write('id', $user['id']);
+
+      $user['access_token_key'] =  Security::decrypt($user['access_token_key'],$key);
+      $user['access_token_secret'] =  Security::decrypt($user['access_token_secret'],$key);
 
       // Auth Component 内のログイン処理呼び出し
       if ($this->Auth->login($user)) {
@@ -111,10 +116,9 @@ class ExamplesController extends AppController {
 	 $cookieValue = $this -> Cookie -> read('senbei'); //Cookieの値を読み込む
 
     if(isset($cookieValue)){ //Cookieがあったら
-
-    $cookieValue = Security::decrypt($cookieValue,$key);//入ってない可能性もあるのでif文内で処理。再代入
+    print_r($cookieValue);
+    //$cookieValue = Security::decrypt($cookieValue,$key);//入ってない可能性もあるのでif文内で処理。再代入
     $user = $this ->User->read(null,$cookieValue); //DBの中のレコードをuser定義
-
 
         if(empty($user)) {
           //CookieがあってもDB側で値が存在していなかった場合
@@ -122,7 +126,11 @@ class ExamplesController extends AppController {
         }
         else{
 
-          $user['User']['']
+          $key = 'wuo9ieChee1ienai7ur7ahkie1Fee4ei';//暗号化用の鍵用意
+
+
+          $user['User']['access_token_key'] =  Security::decrypt($user['User']['access_token_key'],$key);
+          $user['User']['access_token_secret'] =  Security::decrypt($user['User']['access_token_secret'],$key);
 
           if ($this->Auth->login($user[$this->Auth->userModel])) {  //ログイン処理を呼び出して,ログイン出来れば
             /*
