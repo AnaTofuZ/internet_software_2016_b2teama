@@ -127,10 +127,11 @@ class ExamplesController extends AppController {
         else{
 
           $key = 'wuo9ieChee1ienai7ur7ahkie1Fee4ei';//暗号化用の鍵用意
+          print_r("hoge");
+          print_r($user['User']['access_token_key']);
 
-
-          $user['User']['access_token_key'] =  Security::decrypt($user['User']['access_token_key'],$key);
-          $user['User']['access_token_secret'] =  Security::decrypt($user['User']['access_token_secret'],$key);
+         // $user['User']['access_token_key'] =  Security::decrypt($user['User']['access_token_key'],$key);
+          //$user['User']['access_token_secret'] =  Security::decrypt($user['User']['access_token_secret'],$key);
 
           if ($this->Auth->login($user[$this->Auth->userModel])) {  //ログイン処理を呼び出して,ログイン出来れば
             /*
@@ -167,6 +168,12 @@ class ExamplesController extends AppController {
     // Twitter Timeline の表示
 
     $comsumer = $this->__createComsumer();
+/*
+    $key = 'wuo9ieChee1ienai7ur7ahkie1Fee4ei';//暗号化用の鍵用意
+
+     $users['access_token_key'] =  Security::decrypt($users['access_token_key'],$key);
+    $users['access_token_secret'] =  Security::decrypt($users['access_token_secret'],$key);
+*/
 
     $twitterData="";
     $json=$comsumer->get(

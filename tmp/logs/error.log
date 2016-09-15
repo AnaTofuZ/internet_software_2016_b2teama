@@ -2272,3 +2272,33 @@ Stack Trace:
 #3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2016-09-15 16:35:25 Error: [SocketException] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution
+Request URL: /cakephp/examples/
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Network/CakeSocket.php(347): CakeSocket->connect()
+#1 /src/cakephp/lib/Cake/Network/Http/HttpSocket.php(377): CakeSocket->write('GET /1.1/status...')
+#2 /src/cakephp/lib/Cake/Network/Http/HttpSocket.php(466): HttpSocket->request(Array)
+#3 /src/cakephp/app/Vendor/OAuth/OAuthClient.php(117): HttpSocket->get('https://api.twi...')
+#4 /src/cakephp/app/Vendor/OAuth/OAuthClient.php(35): OAuthClient->doGet('https://api.twi...')
+#5 /src/cakephp/app/Controller/ExamplesController.php(177): OAuthClient->get('1014888828-21sB...', 'OB9sO8oO1sY0tYV...', 'https://api.twi...', Array)
+#6 [internal function]: ExamplesController->index()
+#7 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ExamplesController), Array)
+#8 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ExamplesController), Object(CakeRequest))
+#10 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-09-15 16:35:52 Error: [SocketException] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution
+Request URL: /cakephp/examples/
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Network/CakeSocket.php(347): CakeSocket->connect()
+#1 /src/cakephp/lib/Cake/Network/Http/HttpSocket.php(377): CakeSocket->write('GET /1.1/status...')
+#2 /src/cakephp/lib/Cake/Network/Http/HttpSocket.php(466): HttpSocket->request(Array)
+#3 /src/cakephp/app/Vendor/OAuth/OAuthClient.php(117): HttpSocket->get('https://api.twi...')
+#4 /src/cakephp/app/Vendor/OAuth/OAuthClient.php(35): OAuthClient->doGet('https://api.twi...')
+#5 /src/cakephp/app/Controller/ExamplesController.php(177): OAuthClient->get('1014888828-21sB...', 'OB9sO8oO1sY0tYV...', 'https://api.twi...', Array)
+#6 [internal function]: ExamplesController->index()
+#7 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ExamplesController), Array)
+#8 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ExamplesController), Object(CakeRequest))
+#10 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
