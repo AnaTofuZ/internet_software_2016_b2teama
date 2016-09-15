@@ -116,10 +116,10 @@ class ExamplesController extends AppController {
 	 $cookieValue = $this -> Cookie -> read('senbei'); //Cookieの値を読み込む
 
     if(isset($cookieValue)){ //Cookieがあったら
-    print_r($cookieValue);
+    //print_r($cookieValue);
     //$cookieValue = Security::decrypt($cookieValue,$key);//入ってない可能性もあるのでif文内で処理。再代入
     $user = $this ->User->read(null,$cookieValue); //DBの中のレコードをuser定義
-
+      print_r($user);
         if(empty($user)) {
           //CookieがあってもDB側で値が存在していなかった場合
           $this->Session->setFlash(_('Cookieが不正です。再ログインしてください.'),'default');
@@ -127,13 +127,13 @@ class ExamplesController extends AppController {
         else{
 
           $key = 'wuo9ieChee1ienai7ur7ahkie1Fee4ei';//暗号化用の鍵用意
-          print_r("hoge");
-          print_r($user['User']['access_token_key']);
+        //  print_r("hoge");
+         // print_r($user['User']['access_token_key']);
 
-         // $user['User']['access_token_key'] =  Security::decrypt($user['User']['access_token_key'],$key);
-          //$user['User']['access_token_secret'] =  Security::decrypt($user['User']['access_token_secret'],$key);
+       //   $user['User']['access_token_key'] =  Security::decrypt($user['User']['access_token_key'],$key);
+        //  $user['User']['access_token_secret'] =  Security::decrypt($user['User']['access_token_secret'],$key);
 
-          if ($this->Auth->login($user[$this->Auth->userModel])) {  //ログイン処理を呼び出して,ログイン出来れば
+          if ($this->Auth->login($user['User'])) {  //ログイン処理を呼び出して,ログイン出来れば
             /*
              * この時点で$userに保存されている情報は$print_r($user)すれば確認できるが
              * Array ( [User] => Array ( [id] => 1014888828 [name] => 八雲アナグラ [screen_name] => AnaTofuZ

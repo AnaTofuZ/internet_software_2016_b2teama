@@ -60,4 +60,4 @@ cakePHPにおける認証アクションをまとめたもの。Twitterクライ
  - とりあえずaddviewを作成。今はfoo!をprintしてるだけ
  - 掲示板機能に関しては内容(body)が反映されていない
  - 確認した所DBには保存がされているのでControllerの処理が問題?
- - test
+ - DBに暗号化したsecret__keyうんぬんを保存する際にオーバーフローしてた
