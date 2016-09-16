@@ -130,7 +130,6 @@ class ExamplesController extends AppController {
         //  print_r("hoge");
          // print_r($user['User']['access_token_key']);
 
-          $ciper = Hash::extract($user,'{n}.User.access_token_key');
           print_r($user);
           $ciper =  $user['User']['access_token_key'];
           $ciper =  Security::decrypt($ciper,$key);
