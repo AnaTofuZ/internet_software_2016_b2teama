@@ -9,7 +9,7 @@ class ExamplesController extends AppController {
   // 利用するコンポーネント(プラグイン)
   public $components = array('Auth','Cookie','DebugKit.Toolbar');
 
-  public $key = 'wuo9ieChee1ienai7ur7ahkie1Fee4ei';//暗号化用の鍵用意
+  //public $key = 'wuo9ieChee1ienai7ur7ahkie1Fee4ei';//暗号化用の鍵用意
 
   // コントローラ内の各アクション(関数)を実行する前に処理
   public function beforefilter(){
@@ -76,8 +76,8 @@ class ExamplesController extends AppController {
       $user['id_hush'] = Security::hash($twitterData['id_str'],'sha256',true);
       $user['name'] = $twitterData['name'];
       $user['screen_name'] = $twitterData['screen_name'];
-      $user['access_token_key'] = Security::encrypt($accessToken->key,$key);//アクセストークン類を可逆暗号化
-      $user['access_token_secret'] = Security::encrypt($accessToken->secret,$key);
+      $user['access_token_key'] = $accessToken->key;//アクセストークン類を可逆暗号化
+      $user['access_token_secret'] = $accessToken->secret;
 
       // Users テーブルの更新
       $this->User->save($user);
@@ -112,7 +112,6 @@ class ExamplesController extends AppController {
 
     if(isset($cookieValue)){ //Cookieがあったら
 
-    $cookieValue = Security::decrypt($cookieValue,$key);//入ってない可能性もあるのでif文内で処理。再代入
     $user = $this ->User->read(null,$cookieValue); //DBの中のレコードをuser定義
 
 
