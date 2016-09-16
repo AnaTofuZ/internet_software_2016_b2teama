@@ -2302,3 +2302,23 @@ Stack Trace:
 #9 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ExamplesController), Object(CakeRequest))
 #10 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #11 {main}
+2016-09-15 19:55:48 Error: [CakeException] The data to decrypt cannot be empty.
+Request URL: /cakephp/examples/index
+Stack Trace:
+#0 /src/cakephp/app/Controller/ExamplesController.php(174): Security::decrypt(false, 'wuo9ieChee1iena...')
+#1 [internal function]: ExamplesController->index()
+#2 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ExamplesController), Array)
+#3 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ExamplesController), Object(CakeRequest))
+#5 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-09-15 19:56:16 Error: [CakeException] The data to decrypt cannot be empty.
+Request URL: /cakephp/examples/index
+Stack Trace:
+#0 /src/cakephp/app/Controller/ExamplesController.php(174): Security::decrypt(false, 'wuo9ieChee1iena...')
+#1 [internal function]: ExamplesController->index()
+#2 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ExamplesController), Array)
+#3 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ExamplesController), Object(CakeRequest))
+#5 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}

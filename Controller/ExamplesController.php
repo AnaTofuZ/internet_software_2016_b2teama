@@ -119,7 +119,7 @@ class ExamplesController extends AppController {
     //print_r($cookieValue);
     //$cookieValue = Security::decrypt($cookieValue,$key);//入ってない可能性もあるのでif文内で処理。再代入
     $user = $this ->User->read(null,$cookieValue); //DBの中のレコードをuser定義
-      print_r($user);
+      //print_r($user);
         if(empty($user)) {
           //CookieがあってもDB側で値が存在していなかった場合
           $this->Session->setFlash(_('Cookieが不正です。再ログインしてください.'),'default');
@@ -130,8 +130,13 @@ class ExamplesController extends AppController {
         //  print_r("hoge");
          // print_r($user['User']['access_token_key']);
 
-       //   $user['User']['access_token_key'] =  Security::decrypt($user['User']['access_token_key'],$key);
-        //  $user['User']['access_token_secret'] =  Security::decrypt($user['User']['access_token_secret'],$key);
+          $ciper = Hash::extract($user,'{n}.User.access_token_key');
+          print_r($user);
+          $ciper =  $user['User']['access_token_key'];
+          $ciper =  Security::decrypt($ciper,$key);
+          $user['User']['access_token_key'] = $ciper;
+          //print_r($key);
+          $user['User']['access_token_secret'] =  Security::decrypt($user['User']['access_token_secret'],$key);
 
           if ($this->Auth->login($user['User'])) {  //ログイン処理を呼び出して,ログイン出来れば
             /*
@@ -141,7 +146,7 @@ class ExamplesController extends AppController {
              * [access_token_secret] => OB9sO8oO1sY0tYVk9yVtiQmBlikbkkEXRhNU8qRZjNa1n ) )
              * といったUsersテーブルから該当するフィールドを所持している
              */
-              return $this->redirect($this->Auth->redirect()); //次の画面に移動
+             // return $this->redirect($this->Auth->redirect()); //次の画面に移動
           }
         }
     }
@@ -168,12 +173,12 @@ class ExamplesController extends AppController {
     // Twitter Timeline の表示
 
     $comsumer = $this->__createComsumer();
-/*
-    $key = 'wuo9ieChee1ienai7ur7ahkie1Fee4ei';//暗号化用の鍵用意
 
-     $users['access_token_key'] =  Security::decrypt($users['access_token_key'],$key);
-    $users['access_token_secret'] =  Security::decrypt($users['access_token_secret'],$key);
-*/
+  //  $key = 'wuo9ieChee1ienai7ur7ahkie1Fee4ei';//暗号化用の鍵用意
+
+//     $users['access_token_key'] =  Security::decrypt($users['access_token_key'],$key);
+  //  $users['access_token_secret'] =  Security::decrypt($users['access_token_secret'],$key);
+
 
     $twitterData="";
     $json=$comsumer->get(
