@@ -2168,3 +2168,14 @@ Stack Trace:
 #3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2016-09-15 16:31:51 Error: [CakeException] Invalid key for encrypt(), key must be at least 256 bits (32 bytes) long.
+Request URL: /cakephp/examples/callback?oauth_token=v6ziyQAAAAAAhO19AAABVyzCL4g&oauth_verifier=9SJyJSlsiyRWwFvdHSiMD2oIE73rl4UF
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Utility/Security.php(343): Security::_checkKey(NULL, 'encrypt()')
+#1 /src/cakephp/app/Controller/ExamplesController.php(79): Security::encrypt('1014888828-21sB...', NULL)
+#2 [internal function]: ExamplesController->callback()
+#3 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ExamplesController), Array)
+#4 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#5 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ExamplesController), Object(CakeRequest))
+#6 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}

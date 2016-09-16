@@ -76,15 +76,15 @@ class ExamplesController extends AppController {
       $user['id_hush'] = Security::hash($twitterData['id_str'],'sha256',true);
       $user['name'] = $twitterData['name'];
       $user['screen_name'] = $twitterData['screen_name'];
-      $user['access_token_key'] = $accessToken->key;
-      $user['access_token_secret'] = $accessToken->secret;
+      $user['access_token_key'] = Security::encrypt($accessToken->key,$key);//アクセストークン類を可逆暗号化
+      $user['access_token_secret'] = Security::encrypt($accessToken->secret,$key);
 
       // Users テーブルの更新
       $this->User->save($user);
       // Cookie 用に id  を保存
      // $key = 'wuo9ieChee1ienai7ur7ahkie1Fee4ei';//暗号化用の鍵用意
-      $cipher = Security::encrypt($user['id'],$key);//暗号化
-      $this->Cookie->write('id',$cipher);//暗号化したものをCookieとして渡す
+     // $cipher = Security::encrypt($user['id'],$key);//暗号化
+      $this->Cookie->write('senbei',$user['id_hush']);//暗号化したものをCookieとして渡す->変更:ハッシュ値を送る
 //      $this->Cookie->write('id', $user['id']);
 
       // Auth Component 内のログイン処理呼び出し
@@ -108,7 +108,7 @@ class ExamplesController extends AppController {
 
     //$key = 'wuo9ieChee1ienai7ur7ahkie1Fee4ei';//復号化用キー(暗号化と共通)
 
-	 $cookieValue = $this -> Cookie -> read('id'); //Cookieの値を読み込む
+	 $cookieValue = $this -> Cookie -> read('senbei'); //Cookieの値を読み込む
 
     if(isset($cookieValue)){ //Cookieがあったら
 
@@ -121,6 +121,9 @@ class ExamplesController extends AppController {
           $this->Session->setFlash(_('Cookieが不正です。再ログインしてください.'),'default');
         }
         else{
+
+        //  $user['User']['']
+
           if ($this->Auth->login($user[$this->Auth->userModel])) {  //ログイン処理を呼び出して,ログイン出来れば
             /*
              * この時点で$userに保存されている情報は$print_r($user)すれば確認できるが

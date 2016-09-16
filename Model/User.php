@@ -20,4 +20,8 @@ class User extends AppModel {
  */
 	public $displayField = 'name';
 
+//primarykeyを変更
+    public $primaryKey = 'id_hush';
+
+
 }
