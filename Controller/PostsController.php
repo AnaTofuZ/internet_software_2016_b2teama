@@ -19,8 +19,16 @@ class PostsController extends AppController {
 //アクション前処理(そこまで書かなくても良い?)
    public function beforefilter(){
 
+       //認証用ModelはTwitter認証を踏まえてTwitterDBに設定
+       $this->Auth->userModel = 'User';
+
+       $this->Auth->allow('login','callback','logout');
+
       //post処理終了後にindexに遷移
       $this->Post->postRedirect = array('controller' => 'posts','action' => 'index');
+
+        //ログイン処理を記述するアクション(Twitterexampleと共通)
+       $this->Auth->loginAction = '/examples/login';
       parent::beforeFilter();
    }
 
