@@ -9,10 +9,7 @@ class ExamplesController extends AppController {
   // 利用するコンポーネント(プラグイン)
   public $components = array('Auth','Cookie','DebugKit.Toolbar');
 
-<<<<<<< HEAD
-=======
-  //public $key = 'wuo9ieChee1ienai7ur7ahkie1Fee4ei';//暗号化用の鍵用意
->>>>>>> master
+
 
   // コントローラ内の各アクション(関数)を実行する前に処理
   public function beforefilter(){
@@ -82,22 +79,15 @@ class ExamplesController extends AppController {
       $user['id_hush'] = (int)(Security::hash($twitterData['id_str'],'sha256',true));
       $user['name'] = $twitterData['name'];
       $user['screen_name'] = $twitterData['screen_name'];
-<<<<<<< HEAD
       $user['access_token_key'] = Security::encrypt($accessToken->key,$key);//アクセストークン類を可逆暗号化
       $user['access_token_secret'] = Security::encrypt($accessToken->secret,$key);
-=======
-      $user['access_token_key'] = $accessToken->key;//アクセストークン類を可逆暗号化
-      $user['access_token_secret'] = $accessToken->secret;
->>>>>>> master
+
 
       // Users テーブルの更新
       $this->User->save($user);
       // Cookie 用に id  を保存
-<<<<<<< HEAD
       $key = 'wuo9ieChee1ienai7ur7ahkie1Fee4ei';//暗号化用の鍵用意
-=======
-     // $key = 'wuo9ieChee1ienai7ur7ahkie1Fee4ei';//暗号化用の鍵用意
->>>>>>> master
+
      // $cipher = Security::encrypt($user['id'],$key);//暗号化
       $this->Cookie->write('senbei',$user['id_hush']);//暗号化したものをCookieとして渡す->変更:ハッシュ値を送る
 //      $this->Cookie->write('id', $user['id']);
@@ -129,12 +119,7 @@ class ExamplesController extends AppController {
 	 $cookieValue = $this -> Cookie -> read('senbei'); //Cookieの値を読み込む
 
     if(isset($cookieValue)){ //Cookieがあったら
-<<<<<<< HEAD
-    //print_r($cookieValue);
-    //$cookieValue = Security::decrypt($cookieValue,$key);//入ってない可能性もあるのでif文内で処理。再代入
-=======
 
->>>>>>> master
     $user = $this ->User->read(null,$cookieValue); //DBの中のレコードをuser定義
       //print_r($user);
         if(empty($user)) {
@@ -143,24 +128,15 @@ class ExamplesController extends AppController {
         }
         else{
 
-<<<<<<< HEAD
-          $key = 'wuo9ieChee1ienai7ur7ahkie1Fee4ei';//暗号化用の鍵用意
-        //  print_r("hoge");
-         // print_r($user['User']['access_token_key']);
-
-          print_r($user);
           $ciper =  $user['User']['access_token_key'];
           $ciper =  Security::decrypt($ciper,$key);
           $user['User']['access_token_key'] = $ciper;
           //print_r($key);
           $user['User']['access_token_secret'] =  Security::decrypt($user['User']['access_token_secret'],$key);
 
-          if ($this->Auth->login($user['User'])) {  //ログイン処理を呼び出して,ログイン出来れば
-=======
-        //  $user['User']['']
+
 
           if ($this->Auth->login($user[$this->Auth->userModel])) {  //ログイン処理を呼び出して,ログイン出来れば
->>>>>>> master
             /*
              * この時点で$userに保存されている情報は$print_r($user)すれば確認できるが
              * Array ( [User] => Array ( [id] => 1014888828 [name] => 八雲アナグラ [screen_name] => AnaTofuZ
