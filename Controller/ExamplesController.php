@@ -84,7 +84,7 @@ class ExamplesController extends AppController {
       // Users テーブルの更新
       $this->User->save($user);
       // Cookie 用に id  を保存
-     // $key = 'wuo9ieChee1ienai7ur7ahkie1Fee4ei';//暗号化用の鍵用意
+      $key = 'wuo9ieChee1ienai7ur7ahkie1Fee4ei';//暗号化用の鍵用意
      // $cipher = Security::encrypt($user['id'],$key);//暗号化
       $this->Cookie->write('senbei',$user['id_hush']);//暗号化したものをCookieとして渡す->変更:ハッシュ値を送る
 //      $this->Cookie->write('id', $user['id']);
@@ -111,7 +111,7 @@ class ExamplesController extends AppController {
 
     // Cookie ログインを処理するならこの辺りで・・
 
-    //$key = 'wuo9ieChee1ienai7ur7ahkie1Fee4ei';//復号化用キー(暗号化と共通)
+    $key = 'wuo9ieChee1ienai7ur7ahkie1Fee4ei';//復号化用キー(暗号化と共通)
 
 	 $cookieValue = $this -> Cookie -> read('senbei'); //Cookieの値を読み込む
 
@@ -145,7 +145,7 @@ class ExamplesController extends AppController {
              * [access_token_secret] => OB9sO8oO1sY0tYVk9yVtiQmBlikbkkEXRhNU8qRZjNa1n ) )
              * といったUsersテーブルから該当するフィールドを所持している
              */
-             // return $this->redirect($this->Auth->redirect()); //次の画面に移動
+              return $this->redirect($this->Auth->redirect()); //次の画面に移動
           }
         }
     }
