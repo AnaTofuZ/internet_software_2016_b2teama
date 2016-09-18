@@ -24,6 +24,10 @@ class PostsController extends AppController {
       parent::beforeFilter();
    }
 
+   public function login(){
+
+   }
+
     public function index()
     {
         $posts = $this->Post->find('all');
