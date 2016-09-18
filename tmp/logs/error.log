@@ -2168,8 +2168,13 @@ Stack Trace:
 #3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+<<<<<<< HEAD
 2016-09-14 16:33:42 Error: [CakeException] Invalid key for encrypt(), key must be at least 256 bits (32 bytes) long.
 Request URL: /cakephp/examples/callback?oauth_token=kk8PhQAAAAAAhO19AAABVyeeo5s&oauth_verifier=RWfocfmMuGZHgf5kzZ1qTfA8sAzcRZOw
+=======
+2016-09-15 16:31:51 Error: [CakeException] Invalid key for encrypt(), key must be at least 256 bits (32 bytes) long.
+Request URL: /cakephp/examples/callback?oauth_token=v6ziyQAAAAAAhO19AAABVyzCL4g&oauth_verifier=9SJyJSlsiyRWwFvdHSiMD2oIE73rl4UF
+>>>>>>> master
 Stack Trace:
 #0 /src/cakephp/lib/Cake/Utility/Security.php(343): Security::_checkKey(NULL, 'encrypt()')
 #1 /src/cakephp/app/Controller/ExamplesController.php(79): Security::encrypt('1014888828-21sB...', NULL)
@@ -2179,6 +2184,7 @@ Stack Trace:
 #5 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ExamplesController), Object(CakeRequest))
 #6 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #7 {main}
+<<<<<<< HEAD
 2016-09-14 16:34:56 Error: [CakeException] Invalid key for encrypt(), key must be at least 256 bits (32 bytes) long.
 Request URL: /cakephp/examples/callback?oauth_token=UM5gNgAAAAAAhO19AAABVyefxIE&oauth_verifier=vsMaZ1XVdfPWHO6879Qf1tkbKpPxIBHB
 Stack Trace:
@@ -2322,3 +2328,5 @@ Stack Trace:
 #4 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ExamplesController), Object(CakeRequest))
 #5 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #6 {main}
+=======
+>>>>>>> master

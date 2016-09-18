@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 追記
 idのhush値を利用して認証させたかったのでUsersにid__hushというフィールドを追加しています。masterで実装したは確認できてないですが,modelで見るフィールドをid_hushに変えている筈です
 
@@ -59,8 +60,14 @@ cakePHPにおける認証アクションをまとめたもの。Twitterクライ
 
 使用するControllerでコンポーネントとしてDebugKit.Toolbarを使用すれば,画面の上にcakeマークがでてきて押すとその時のsession情報などが入る。そこを見て欲しい。また,変数を確認したい場合はprint_r($user);とかすれば確認が出来る。
 
+=======
+hoge
+>>>>>>> master
 ## 変更点
  - とりあえずaddviewを作成。今はfoo!をprintしてるだけ
  - 掲示板機能に関しては内容(body)が反映されていない
  - 確認した所DBには保存がされているのでControllerの処理が問題?
+<<<<<<< HEAD
  - DBに暗号化したsecret__keyうんぬんを保存する際にオーバーフローしてた
+=======
+>>>>>>> master
