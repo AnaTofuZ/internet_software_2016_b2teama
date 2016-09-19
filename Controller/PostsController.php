@@ -7,7 +7,7 @@ class PostsController extends AppController {
 //念の為にUserモデルを使用宣言。$scaffoldを使った場合はarray('Post')じゃないとダメ
    public $uses =array('Post','User');
 //利用するコンポーネント(プラグイン)を宣言。
-   public $components = array('Auth','Cookie','DebugKit.Toolbar','Security');
+   public $components = array('Auth','Cookie','DebugKit.Toolbar');
    public $helpers = array('Html','Form','Flash');
 /**
  * Scaffold
