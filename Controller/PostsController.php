@@ -27,6 +27,9 @@ class PostsController extends AppController {
       //post処理終了後にindexに遷移
       $this->Post->postRedirect = array('controller' => 'posts','action' => 'index');
 
+       //ログイン処理語に移動する標準アクション
+
+       $this->Auth->loginRedirect = array('controller' => 'posts','action' => 'index');
         //ログイン処理を記述するアクション(Twitterexampleと共通)
        $this->Auth->loginAction = '/examples/login';
       parent::beforeFilter();
