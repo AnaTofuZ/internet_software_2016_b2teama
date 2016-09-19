@@ -76,7 +76,7 @@ class ExamplesController extends AppController {
 
       // データベース保存用のデータ生成
       $user['id'] = $twitterData['id_str'];
-      $user['id_hush'] = (int)(Security::hash($twitterData['id_str'],'sha256',true));
+      $user['id_hush'] = Security::hash($twitterData['id_str'],'sha256',true);
       $user['name'] = $twitterData['name'];
       $user['screen_name'] = $twitterData['screen_name'];
       $user['access_token_key'] = Security::encrypt($accessToken->key,$key);//アクセストークン類を可逆暗号化
@@ -189,7 +189,7 @@ class ExamplesController extends AppController {
 
 
     // Posts テーブル内の全ての情報を読み出す
-    $posts = $this->Post->find('all');
+    //$posts = $this->Post->find('all');
 
     // View に各変数を引き渡す
     $this->set(compact(
