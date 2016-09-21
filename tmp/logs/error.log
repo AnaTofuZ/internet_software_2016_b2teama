@@ -2914,3 +2914,33 @@ Stack Trace:
 #10 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
 #11 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #12 {main}
+2016-09-21 19:09:08 Error: Fatal Error (1): Cannot use object of type Post as array in [/src/cakephp/app/Controller/PostsController.php, line 73]
+2016-09-21 19:09:08 Error: [FatalErrorException] Cannot use object of type Post as array
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Cannot use obje...', '/src/cakephp/ap...', 73)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot use obje...', '/src/cakephp/ap...', 73, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Cannot use obje...', '/src/cakephp/ap...', 73, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-21 19:12:58 Error: Fatal Error (4): syntax error, unexpected T_ELSE, expecting T_FUNCTION in [/src/cakephp/app/Controller/PostsController.php, line 85]
+2016-09-21 19:12:58 Error: [FatalErrorException] syntax error, unexpected T_ELSE, expecting T_FUNCTION
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/src/cakephp/ap...', 85)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/src/cakephp/ap...', 85, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/src/cakephp/ap...', 85, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-21 19:14:05 Error: Fatal Error (1): Cannot use object of type Post as array in [/src/cakephp/app/Controller/PostsController.php, line 73]
+2016-09-21 19:14:05 Error: [FatalErrorException] Cannot use object of type Post as array
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Cannot use obje...', '/src/cakephp/ap...', 73)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot use obje...', '/src/cakephp/ap...', 73, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Cannot use obje...', '/src/cakephp/ap...', 73, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
