@@ -60,3 +60,10 @@ cakePHPにおける認証アクションをまとめたもの。Twitterクライ
 
 使用するControllerでコンポーネントとしてDebugKit.Toolbarを使用すれば,画面の上にcakeマークがでてきて押すとその時のsession情報などが入る。そこを見て欲しい。また,変数を確認したい場合はprint_r($user);とかすれば確認が出来る。
 
+
+# 追記(2016/09/21)
+### アソシエーションについて
+
+詳しくは [講義ページ](http://www.iis.elec.fuk.kindai.ac.jp/~sira/index.php?%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%2F2016%E5%B9%B4%E5%BA%A6%2FCakePHP#jb4fda69) 参照。ForeingKeysは僕の設定だとuser_id_hush 。要はPosts側の設定となる。
+この昨日はForeingKeysを動的に取ってくるわけではないので,何かしらの記述が必要。
+考えられるのは `$user = $this->Auth->user();`
