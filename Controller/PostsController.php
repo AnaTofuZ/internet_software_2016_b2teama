@@ -66,10 +66,16 @@ class PostsController extends AppController {
         if($this->request->is('post')){
             //この時点で$userの情報を格納しないといけない
             $this->Post->create();
-         if($this->Post->save($this->request->data)){
+            $temp = $this->request->data;
+
+            $temp["Post"]["user_id_hush"] =  $user["id_hush"];
+           // print_r($temp);
+
+            if($this->Post->save($temp)){
+   //      if($this->Post->save($this->request->data)){
    //何かしらの記述
 
-             $this->Model->validates();//エラーが出ないと逆にエラー
+            // $this->Model->validates();//エラーが出ないと逆にエラー
 
 
          }
