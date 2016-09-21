@@ -34,7 +34,7 @@ class Post extends AppModel {
 	public $belongsTo = array(
 		'Users' => array(
 			'className' => 'User',
-			'foreignKey' => 'id',
+			'foreignKey' => 'user_id_hush',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''

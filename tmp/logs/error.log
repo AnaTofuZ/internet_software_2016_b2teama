@@ -2898,3 +2898,19 @@ Stack Trace:
 #10 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
 #11 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #12 {main}
+2016-09-21 18:00:30 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Post.id_hush' in 'on clause'
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(468): PDOStatement->execute(Array)
+#1 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(434): DboSource->_execute('SELECT `Post`.`...', Array)
+#2 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(671): DboSource->execute('SELECT `Post`.`...', Array, Array)
+#3 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(1120): DboSource->fetchAll('SELECT `Post`.`...', false)
+#4 /src/cakephp/lib/Cake/Model/Model.php(3031): DboSource->read(Object(Post), Array)
+#5 /src/cakephp/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#6 /src/cakephp/app/Controller/PostsController.php(60): Model->find('all')
+#7 [internal function]: PostsController->add()
+#8 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#9 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
