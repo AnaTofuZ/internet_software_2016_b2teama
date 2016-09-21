@@ -29,10 +29,12 @@ class Post extends AppModel {
  *
  * @var array
  */
+
+
 	public $belongsTo = array(
 		'Users' => array(
 			'className' => 'Users',
-			'foreignKey' => 'users_id',
+			'foreignKey' => 'id_hush',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
