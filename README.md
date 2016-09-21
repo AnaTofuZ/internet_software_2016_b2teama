@@ -66,4 +66,6 @@ cakePHPにおける認証アクションをまとめたもの。Twitterクライ
 
 詳しくは [講義ページ](http://www.iis.elec.fuk.kindai.ac.jp/~sira/index.php?%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%2F2016%E5%B9%B4%E5%BA%A6%2FCakePHP#jb4fda69) 参照。ForeingKeysは僕の設定だとuser_id_hush 。要はPosts側の設定となる。
 この昨日はForeingKeysを動的に取ってくるわけではないので,何かしらの記述が必要。
-考えられるのは `$user = $this->Auth->user();`
+考えられるのは `$user = $this->Auth->user();`すると `$user`に AUthでログインしたユーザ情報が入る。
+それを使うとうまくいきそう。
+データ保存系は[ここを参照](http://book.cakephp.org/2.0/ja/models/saving-your-data.html) (データバリデーションも) 
