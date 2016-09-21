@@ -52,7 +52,9 @@ class PostsController extends AppController {
 
 
     public function add(){
-      if($this->request->is('post')){
+        $user = $this->Auth->user();
+
+        if($this->request->is('post')){
          $this->Post->create();
          if($this->Post->save($this->request->data)){
              $post = $this->Post->find('all'); //$postにPost->find出来た要素を入れる。これだとおｋ
@@ -67,7 +69,7 @@ class PostsController extends AppController {
        */
          $this->Post->save($post);}
           $this->Session->setFlash(_('Succesed post.'),'default');
-         //return $this->redirect(array('action' => 'index'));
+         return $this->redirect(array('action' => 'index'));
       }else{
          $this->Session->setFlash(__('Post don\'t posted .'), 'default', array('class'=>'error-message'), 'auth');
       }
