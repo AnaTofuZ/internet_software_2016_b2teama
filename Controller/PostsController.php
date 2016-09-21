@@ -64,20 +64,12 @@ class PostsController extends AppController {
         //print_r($user);
 
         if($this->request->is('post')){
+            //この時点で$userの情報を格納しないといけない
          $this->Post->create();
          if($this->Post->save($this->request->data)){
-             //$post = $this->Post->find('all'); //$postにPost->find出来た要素を入れる。これだとおｋ
+   //何かしらの記述
 
-
-         //    エラーの原因はここみたい
-              $post["Post"]["id"] = $this->Post["Post"]["id"];
-         $post["Post"]["title"] = $this->post["Post"]["title"];
-         $post["Post"]["body"] = $this->post["Post"]["body"];
-         $post["Post"]["created"] = $this->post["Post"]["created"];
-         $post["Post"]["modified"] = $this->post["Post"]["modified"];
-
-         $post["Post"]["user_id_hush "] = $user->id_hush;
-         $this->Post->save($post);}
+         }
           $this->Session->setFlash(_('Succesed post.'),'default');
          return $this->redirect(array('action' => 'index'));
       }else{
