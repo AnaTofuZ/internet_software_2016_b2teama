@@ -40,4 +40,19 @@ class Post extends AppModel {
 			'order' => ''
 		)
 	);
+
+    public $validate = array(
+
+        'title' => array(
+            'rule' => 'notBlank',
+            'message' => 'タイトルが未入力です。'
+        ),
+
+        'body'  => array(
+            'rule' => 'notBlank',
+            'message' => '内容が未入力です。'
+        )
+    );
+
+
 }

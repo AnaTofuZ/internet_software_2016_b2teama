@@ -65,13 +65,16 @@ class PostsController extends AppController {
 
         if($this->request->is('post')){
             //この時点で$userの情報を格納しないといけない
-         $this->Post->create();
+            $this->Post->create();
          if($this->Post->save($this->request->data)){
    //何かしらの記述
 
+             $this->Model->validates();//エラーが出ないと逆にエラー
+
+
          }
-          $this->Session->setFlash(_('Succesed post.'),'default');
-         return $this->redirect(array('action' => 'index'));
+          //$this->Session->setFlash(_('Succesed post.'),'default');
+         //return $this->redirect(array('action' => 'index'));
       }else{
          $this->Session->setFlash(__('Post don\'t posted .'), 'default', array('class'=>'error-message'), 'auth');
       }
