@@ -7,7 +7,7 @@ class PostsController extends AppController {
 //念の為にUserモデルを使用宣言。$scaffoldを使った場合はarray('Post')じゃないとダメ
    public $uses =array('Post','User');
 //利用するコンポーネント(プラグイン)を宣言。
-   public $components = array('Auth','Cookie','DebugKit.Toolbar');
+   public $components = array('Auth','Cookie','DebugKit.Toolbar','Security');
    public $helpers = array('Html','Form','Flash');
 /**
  * Scaffold
@@ -32,10 +32,10 @@ class PostsController extends AppController {
        $this->Auth->loginRedirect = array('controller' => 'posts','action' => 'index');
         //ログイン処理を記述するアクション(Twitterexampleと共通)
        $this->Auth->loginAction = '/examples/login';
-/*
+
        $this->Security->validatePost = true; // 改竄対策を無効
        $this->Security->csrfCheck = false;    // CSR対策を無効
-*/
+
       parent::beforeFilter();
    }
 
