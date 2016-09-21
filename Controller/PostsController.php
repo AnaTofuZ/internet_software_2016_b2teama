@@ -17,7 +17,7 @@ class PostsController extends AppController {
 //public $scaffold;
 
 //アクション前処理(そこまで書かなくても良い?)
-   public function beforefilter(){
+   public function beforeFilter(){
 
        //認証用ModelはTwitter認証を踏まえてTwitterDBに設定
        $this->Auth->userModel = 'User';
@@ -32,6 +32,10 @@ class PostsController extends AppController {
        $this->Auth->loginRedirect = array('controller' => 'posts','action' => 'index');
         //ログイン処理を記述するアクション(Twitterexampleと共通)
        $this->Auth->loginAction = '/examples/login';
+/*
+       $this->Security->validatePost = true; // 改竄対策を無効
+       $this->Security->csrfCheck = false;    // CSR対策を無効
+*/
       parent::beforeFilter();
    }
 
@@ -44,6 +48,8 @@ class PostsController extends AppController {
         $posts = $this->Post->find('all');
         $this->set('posts',$posts);
     }
+
+
 
     public function add(){
       if($this->request->is('post')){

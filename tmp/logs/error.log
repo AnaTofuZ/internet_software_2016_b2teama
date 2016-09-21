@@ -2528,3 +2528,131 @@ Stack Trace:
 #12 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
 #13 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #14 {main}
+2016-09-21 15:40:35 Error: Fatal Error (4): syntax error, unexpected T_VARIABLE, expecting T_FUNCTION in [/src/cakephp/app/Controller/PostsController.php, line 50]
+2016-09-21 15:40:35 Error: [FatalErrorException] syntax error, unexpected T_VARIABLE, expecting T_FUNCTION
+Request URL: /cakephp/Posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/src/cakephp/ap...', 50)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/src/cakephp/ap...', 50, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/src/cakephp/ap...', 50, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-21 15:41:24 Error: Fatal Error (4): syntax error, unexpected T_VARIABLE, expecting T_FUNCTION in [/src/cakephp/app/Controller/PostsController.php, line 13]
+2016-09-21 15:41:24 Error: [FatalErrorException] syntax error, unexpected T_VARIABLE, expecting T_FUNCTION
+Request URL: /cakephp/Posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/src/cakephp/ap...', 13)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/src/cakephp/ap...', 13, Array)
+#2 /src/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/src/cakephp/ap...', 13, Array)
+#3 /src/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-21 15:54:01 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'cakephp.users' doesn't exist
+Request URL: /cakephp/Posts
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(468): PDOStatement->execute(Array)
+#1 /src/cakephp/lib/Cake/Model/Datasource/Database/Mysql.php(340): DboSource->_execute('SHOW FULL COLUM...')
+#2 /src/cakephp/lib/Cake/Model/Model.php(1390): Mysql->describe(Object(AppModel))
+#3 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(2542): Model->schema()
+#4 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(1760): DboSource->fields(Object(AppModel), 'Users', '')
+#5 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(1107): DboSource->generateAssociationQuery(Object(Post), Object(AppModel), 'belongsTo', 'Users', Array, Array, false)
+#6 /src/cakephp/lib/Cake/Model/Model.php(3031): DboSource->read(Object(Post), Array)
+#7 /src/cakephp/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#8 /src/cakephp/app/Controller/PostsController.php(48): Model->find('all')
+#9 [internal function]: PostsController->index()
+#10 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#11 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#13 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2016-09-21 15:54:27 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'cakephp.users' doesn't exist
+Request URL: /cakephp/Posts
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(468): PDOStatement->execute(Array)
+#1 /src/cakephp/lib/Cake/Model/Datasource/Database/Mysql.php(340): DboSource->_execute('SHOW FULL COLUM...')
+#2 /src/cakephp/lib/Cake/Model/Model.php(1390): Mysql->describe(Object(AppModel))
+#3 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(2542): Model->schema()
+#4 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(1760): DboSource->fields(Object(AppModel), 'Users', '')
+#5 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(1107): DboSource->generateAssociationQuery(Object(Post), Object(AppModel), 'belongsTo', 'Users', Array, Array, false)
+#6 /src/cakephp/lib/Cake/Model/Model.php(3031): DboSource->read(Object(Post), Array)
+#7 /src/cakephp/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#8 /src/cakephp/app/Controller/PostsController.php(48): Model->find('all')
+#9 [internal function]: PostsController->index()
+#10 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#11 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#13 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2016-09-21 16:01:37 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'cakephp.users' doesn't exist
+Request URL: /cakephp/Posts
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(468): PDOStatement->execute(Array)
+#1 /src/cakephp/lib/Cake/Model/Datasource/Database/Mysql.php(340): DboSource->_execute('SHOW FULL COLUM...')
+#2 /src/cakephp/lib/Cake/Model/Model.php(1390): Mysql->describe(Object(AppModel))
+#3 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(2542): Model->schema()
+#4 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(1760): DboSource->fields(Object(AppModel), 'Users', '')
+#5 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(1107): DboSource->generateAssociationQuery(Object(Post), Object(AppModel), 'belongsTo', 'Users', Array, Array, false)
+#6 /src/cakephp/lib/Cake/Model/Model.php(3031): DboSource->read(Object(Post), Array)
+#7 /src/cakephp/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#8 /src/cakephp/app/Controller/PostsController.php(48): Model->find('all')
+#9 [internal function]: PostsController->index()
+#10 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#11 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#13 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2016-09-21 16:02:00 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'cakephp.users' doesn't exist
+Request URL: /cakephp/Posts
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(468): PDOStatement->execute(Array)
+#1 /src/cakephp/lib/Cake/Model/Datasource/Database/Mysql.php(340): DboSource->_execute('SHOW FULL COLUM...')
+#2 /src/cakephp/lib/Cake/Model/Model.php(1390): Mysql->describe(Object(AppModel))
+#3 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(2542): Model->schema()
+#4 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(1760): DboSource->fields(Object(AppModel), 'Users', '')
+#5 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(1107): DboSource->generateAssociationQuery(Object(Post), Object(AppModel), 'belongsTo', 'Users', Array, Array, false)
+#6 /src/cakephp/lib/Cake/Model/Model.php(3031): DboSource->read(Object(Post), Array)
+#7 /src/cakephp/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#8 /src/cakephp/app/Controller/PostsController.php(48): Model->find('all')
+#9 [internal function]: PostsController->index()
+#10 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#11 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#13 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2016-09-21 16:04:18 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'cakephp.users' doesn't exist
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(468): PDOStatement->execute(Array)
+#1 /src/cakephp/lib/Cake/Model/Datasource/Database/Mysql.php(340): DboSource->_execute('SHOW FULL COLUM...')
+#2 /src/cakephp/lib/Cake/Model/Model.php(1390): Mysql->describe(Object(AppModel))
+#3 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(2542): Model->schema()
+#4 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(1760): DboSource->fields(Object(AppModel), 'Users', '')
+#5 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(1107): DboSource->generateAssociationQuery(Object(Post), Object(AppModel), 'belongsTo', 'Users', Array, Array, false)
+#6 /src/cakephp/lib/Cake/Model/Model.php(3031): DboSource->read(Object(Post), Array)
+#7 /src/cakephp/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#8 /src/cakephp/app/Controller/PostsController.php(58): Model->find('all')
+#9 [internal function]: PostsController->add()
+#10 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#11 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#13 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2016-09-21 16:05:09 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'cakephp.users' doesn't exist
+Request URL: /cakephp/Posts/index
+Stack Trace:
+#0 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(468): PDOStatement->execute(Array)
+#1 /src/cakephp/lib/Cake/Model/Datasource/Database/Mysql.php(340): DboSource->_execute('SHOW FULL COLUM...')
+#2 /src/cakephp/lib/Cake/Model/Model.php(1390): Mysql->describe(Object(AppModel))
+#3 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(2542): Model->schema()
+#4 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(1760): DboSource->fields(Object(AppModel), 'Users', '')
+#5 /src/cakephp/lib/Cake/Model/Datasource/DboSource.php(1107): DboSource->generateAssociationQuery(Object(Post), Object(AppModel), 'belongsTo', 'Users', Array, Array, false)
+#6 /src/cakephp/lib/Cake/Model/Model.php(3031): DboSource->read(Object(Post), Array)
+#7 /src/cakephp/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#8 /src/cakephp/app/Controller/PostsController.php(48): Model->find('all')
+#9 [internal function]: PostsController->index()
+#10 /src/cakephp/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#11 /src/cakephp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /src/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#13 /src/cakephp/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
