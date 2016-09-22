@@ -39,9 +39,6 @@ class PostsController extends AppController {
       parent::beforeFilter();
    }
 
-   public function login(){
-
-   }
 
     public function index()
     {
@@ -84,5 +81,14 @@ class PostsController extends AppController {
 
    }
 
+
+   public function delete($id){
+
+   }
+
+   public function edit($id){
+       $user = $this->Auth->user();
+
+   }
 
 }
