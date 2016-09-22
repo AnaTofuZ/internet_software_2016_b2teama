@@ -71,12 +71,9 @@ class PostsController extends AppController {
             $temp["Post"]["user_id_hush"] =  $user["id_hush"];
            // print_r($temp);
 
-            if($this->Post->save($temp)){
+            if($this->Post->saveAssociated($temp)){
    //      if($this->Post->save($this->request->data)){
    //何かしらの記述
-
-            // $this->Model->validates();//エラーが出ないと逆にエラー
-
 
          }
           //$this->Session->setFlash(_('Succesed post.'),'default');
