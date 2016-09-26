@@ -214,13 +214,16 @@ class ExamplesController extends AppController {
       $user = $this->Auth->user();
 
       if(isset($id) && is_numeric($id)) {
-        $key = 'wuo9ieChee1ienai7ur7ahkie1Fee4ei';//暗号化用の鍵用意
 
         //  $this->render("index");
         $users = $this->Auth->user();
 
-        $users['access_token_key'] =  Security::decrypt($users['access_token_key'],$key);
-        $users['access_token_secret'] =  Security::decrypt($users['access_token_secret'],$key);
+        if(isset($users['id_hush']) && is_numeric($users['id_hush'])) {
+          $key = 'wuo9ieChee1ienai7ur7ahkie1Fee4ei';//暗号化用の鍵用意
+
+          $users['access_token_key'] = Security::decrypt($users['access_token_key'], $key);
+          $users['access_token_secret'] = Security::decrypt($users['access_token_secret'], $key);
+        }
 
         $comsumer = $this->__createComsumer();
 
