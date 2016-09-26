@@ -228,13 +228,13 @@ class ExamplesController extends AppController {
         $comsumer = $this->__createComsumer();
 
 
-        $json = "";
+        //$json = "";
         $json = $comsumer->post(
             $users['access_token_key'],
             $users['access_token_secret'],
             'https://api.twitter.com/1.1/favorites/create.json',
-            $id,
-            true
+          array(  'id' => "$id",
+                  'include_entities' => true)
         );
 
         $json = "";

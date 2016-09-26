@@ -15,8 +15,8 @@
 		print $time.'【'.$timeline['user']['name'].'】@'.
 			$this->Html->link($timeline['user']['screen_name'],
 			'http://www.twitter.com/'.$timeline['user']['screen_name']).
-			$timeline['text'].'<br>';
-		echo $this->Html->link('ふぁぼ',array('action' => 'favorite' ,$timeline['id']));
+			$timeline['text'];
+		echo $this->Html->link('ふぁぼ',array('action' => 'favorite' ,$timeline['id'])).'<br>';
 
 		//$timeline['id'].'<br>';
 
