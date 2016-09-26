@@ -23,6 +23,7 @@ class ExamplesController extends AppController {
     $this->Auth->logoutRedirect = array('controller' => 'examples','action' => 'logout');
     // ログイン処理を記述するアクション
     $this->Auth->loginAction = '/examples/login';
+    $this->Auth->favoriteRedirect = array('controller' => 'examples','action' => 'index');
 
 
     // 認証で利用するフィールド名
@@ -128,9 +129,7 @@ class ExamplesController extends AppController {
         }
         else{
 
-          $ciper =  $user['User']['access_token_key'];
-          $ciper =  Security::decrypt($ciper,$key);
-          $user['User']['access_token_key'] = $ciper;
+          $user['User']['access_token_key'] = Security::decrypt($user['User']['access_token_key'],$key);
           //print_r($key);
           $user['User']['access_token_secret'] =  Security::decrypt($user['User']['access_token_secret'],$key);
 
@@ -171,13 +170,13 @@ class ExamplesController extends AppController {
     // Twitter Timeline の表示
 
     $comsumer = $this->__createComsumer();
+/*
+    $key = 'wuo9ieChee1ienai7ur7ahkie1Fee4ei';//暗号化用の鍵用意
 
-  //  $key = 'wuo9ieChee1ienai7ur7ahkie1Fee4ei';//暗号化用の鍵用意
+     $users['access_token_key'] =  Security::decrypt($users['access_token_key'],$key);
+    $users['access_token_secret'] =  Security::decrypt($users['access_token_secret'],$key);
 
-//     $users['access_token_key'] =  Security::decrypt($users['access_token_key'],$key);
-  //  $users['access_token_secret'] =  Security::decrypt($users['access_token_secret'],$key);
-
-
+*/
     $twitterData="";
     $json=$comsumer->get(
       $users['access_token_key'],
@@ -210,12 +209,15 @@ class ExamplesController extends AppController {
 	}
 
 
-	public function favorite($id){
-      if(isset($id) && is_numeric($id)) {
-		  //$user = $this->Auth->user();
+	public function favorite($id)
+    {
 
 
-		  //  $this->render("index");
+      if (isset($id) && is_numeric($id)) {
+        $user = $this->Auth->user();
+
+
+        //  $this->render("index");
         $users = $this->Auth->user();
 
         $comsumer = $this->__createComsumer();
@@ -226,19 +228,19 @@ class ExamplesController extends AppController {
             $users['access_token_key'],
             $users['access_token_secret'],
             'https://api.twitter.com/1.1/favorites/create.json',
-          array(  'id' => "$id",
-                  'include_entities' => true)
+            array('id' => "$id",
+                'include_entities' => true)
         );
 
 
         $this->Session->setFlash(_('ふぁぼった.'), 'default');
-		  return $this->redirect($this->Auth->redirect()); //次の画面に移動
 
-	  }else{
-        //$this->Session->setFlash(_('ふぁぼれなかった.'), 'default');
+        return $this->redirect($this->Auth->redirect()); //次の画面に移動
+
 
       }
 
     }
+
 }
 ?>
