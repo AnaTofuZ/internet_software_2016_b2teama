@@ -23,7 +23,7 @@ class ExamplesController extends AppController {
     $this->Auth->logoutRedirect = array('controller' => 'examples','action' => 'logout');
     // ログイン処理を記述するアクション
     $this->Auth->loginAction = '/examples/login';
-    $this->Auth->favoriteRedirect = array('controller' => 'examples','action' => 'index');
+    $this->Auth->favoriteRedirect = array('controller' => 'examples','action' => 'login');
 
 
     // 認証で利用するフィールド名
@@ -134,6 +134,10 @@ class ExamplesController extends AppController {
           $user['User']['access_token_secret'] =  Security::decrypt($user['User']['access_token_secret'],$key);
 
 
+          //  ログイン済みであれば index に遷移
+          if(isset($user['id'])){
+            return $this->redirect($this->Auth->redirect()); //Twitter認証にぶっ飛ぶ
+          }
 
           if ($this->Auth->login($user[$this->Auth->userModel])) {  //ログイン処理を呼び出して,ログイン出来れば
             /*
@@ -147,11 +151,7 @@ class ExamplesController extends AppController {
           }
         }
     }
-    /* ログイン済みであれば index に遷移
-    if(isset($user['id'])){
-      return $this->redirect($this->Auth->redirect()); //Twitter認証にぶっ飛ぶ
-    }
-*/
+
 
   }
 
@@ -223,13 +223,12 @@ class ExamplesController extends AppController {
         $comsumer = $this->__createComsumer();
 
 
-        //$json = "";
         $comsumer->post(
             $users['access_token_key'],
             $users['access_token_secret'],
             'https://api.twitter.com/1.1/favorites/create.json',
             array('id' => "$id",
-                'include_entities' => true)
+                'include_entities' => 'true')
         );
 
 
