@@ -23,7 +23,7 @@ class ExamplesController extends AppController {
     $this->Auth->logoutRedirect = array('controller' => 'examples','action' => 'logout');
     // ログイン処理を記述するアクション
     $this->Auth->loginAction = '/examples/login';
-    $this->Auth->favoriteRedirect = array('controller' => 'examples','action' => 'login');
+    $this->Auth->favoriteRedirect = array('controller' => 'examples','action' => 'index');
 
 
     // 認証で利用するフィールド名
