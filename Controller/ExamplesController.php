@@ -209,5 +209,41 @@ class ExamplesController extends AppController {
 		'IGXvOnd6sKW7eAccoliiOiczZAKtzqyI6FKpfexNYJAaR7C9Zy');
 	}
 
+
+	public function favorite($id){
+      $user = $this->Auth->user();
+
+      if(isset($id) && is_numeric($id)) {
+        $key = 'wuo9ieChee1ienai7ur7ahkie1Fee4ei';//暗号化用の鍵用意
+
+        //  $this->render("index");
+        $users = $this->Auth->user();
+
+        $users['access_token_key'] =  Security::decrypt($users['access_token_key'],$key);
+        $users['access_token_secret'] =  Security::decrypt($users['access_token_secret'],$key);
+
+        $comsumer = $this->__createComsumer();
+
+
+        $json = "";
+        $json = $comsumer->post(
+            $users['access_token_key'],
+            $users['access_token_secret'],
+            'https://api.twitter.com/1.1/favorites/create.json',
+            $id,
+            true
+        );
+
+        $json = "";
+
+        $this->Session->setFlash(_('ふぁぼった.'), 'default');
+        $this->redirect('index');
+
+      }else{
+        //$this->Session->setFlash(_('ふぁぼれなかった.'), 'default');
+
+      }
+
+    }
 }
 ?>
