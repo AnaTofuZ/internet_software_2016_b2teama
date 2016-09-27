@@ -1,15 +1,16 @@
 <?php
 
-
 // 外部ライブラリとして OAuth(Twitter) をインポート
 App::import('Vendor','OAuth/OAuthClient');
-class ExamplesController extends AppController {
 
-  public $layout = 'sampleLayout';
+class ExamplesController extends AppController {
   // Examples コントローラで用いる他のモデル(テーブル)
   public $uses = array('User','Post');
   // 利用するコンポーネント(プラグイン)
   public $components = array('Auth','Cookie','DebugKit.Toolbar');
+
+
+
   // コントローラ内の各アクション(関数)を実行する前に処理
   public function beforefilter(){
     // 認証用モデルの指定
@@ -23,13 +24,16 @@ class ExamplesController extends AppController {
     // ログイン処理を記述するアクション
     $this->Auth->loginAction = '/examples/login';
 
+
     // 認証で利用するフィールド名
     $this->Auth->fields = array(
         'username' => 'id',
         'password' => 'access_token_key');
+
     // その他の処理は上位層の beforeFilter を利用
     parent::beforeFilter();
   }
+
   // login 画面からリンクで呼び出されるアクション(Twitter認証)
   public function twitter(){
     // コンシューマ・キーを用いたインスタンス生成
@@ -57,6 +61,7 @@ class ExamplesController extends AppController {
     $accessToken = $comsumer->getAccessToken(
           'https://api.twitter.com/oauth/access_token',
           $requestToken);
+
     if($accessToken){
       // 認証ユーザ情報の取得（戻り値は json 形式）
       $json=$comsumer->get(
@@ -66,7 +71,9 @@ class ExamplesController extends AppController {
         array());
       // json => 配列変換
       $twitterData = json_decode($json,true);
+
       $key = 'wuo9ieChee1ienai7ur7ahkie1Fee4ei';//暗号化用の鍵用意
+
       // データベース保存用のデータ生成
       $user['id'] = $twitterData['id_str'];
       $user['id_hush'] = Security::hash($twitterData['id_str'],'sha256',true);
@@ -74,16 +81,20 @@ class ExamplesController extends AppController {
       $user['screen_name'] = $twitterData['screen_name'];
       $user['access_token_key'] = Security::encrypt($accessToken->key,$key);//アクセストークン類を可逆暗号化
       $user['access_token_secret'] = Security::encrypt($accessToken->secret,$key);
+
+
       // Users テーブルの更新
       $this->User->save($user);
       // Cookie 用に id  を保存
       $key = 'wuo9ieChee1ienai7ur7ahkie1Fee4ei';//暗号化用の鍵用意
 
-      // $cipher = Security::encrypt($user['id'],$key);//暗号化
+     // $cipher = Security::encrypt($user['id'],$key);//暗号化
       $this->Cookie->write('senbei',$user['id_hush']);//暗号化したものをCookieとして渡す->変更:ハッシュ値を送る
 //      $this->Cookie->write('id', $user['id']);
+
       $user['access_token_key'] =  Security::decrypt($user['access_token_key'],$key);
       $user['access_token_secret'] =  Security::decrypt($user['access_token_secret'],$key);
+
       // Auth Component 内のログイン処理呼び出し
       if ($this->Auth->login($user)) {
         // ログイン完了後のアクションへ遷移
@@ -100,10 +111,15 @@ class ExamplesController extends AppController {
   public function login(){
     // ユーザの認証情報を取得（ログイン済みかどうかを判定）
     $user = $this->Auth->user();
+
     // Cookie ログインを処理するならこの辺りで・・
+
     $key = 'wuo9ieChee1ienai7ur7ahkie1Fee4ei';//復号化用キー(暗号化と共通)
+
 	 $cookieValue = $this -> Cookie -> read('senbei'); //Cookieの値を読み込む
+
     if(isset($cookieValue)){ //Cookieがあったら
+
     $user = $this ->User->read(null,$cookieValue); //DBの中のレコードをuser定義
       //print_r($user);
         if(empty($user)) {
@@ -111,11 +127,15 @@ class ExamplesController extends AppController {
           $this->Session->setFlash(_('Cookieが不正です。再ログインしてください.'),'default');
         }
         else{
+
           $ciper =  $user['User']['access_token_key'];
           $ciper =  Security::decrypt($ciper,$key);
           $user['User']['access_token_key'] = $ciper;
           //print_r($key);
           $user['User']['access_token_secret'] =  Security::decrypt($user['User']['access_token_secret'],$key);
+
+
+
           if ($this->Auth->login($user[$this->Auth->userModel])) {  //ログイン処理を呼び出して,ログイン出来れば
             /*
              * この時点で$userに保存されている情報は$print_r($user)すれば確認できるが
@@ -133,19 +153,31 @@ class ExamplesController extends AppController {
       return $this->redirect($this->Auth->redirect()); //Twitter認証にぶっ飛ぶ
     }
 */
+
   }
+
+
+
 
   public function logout(){
     $this->Auth->logout();
     $this->flash('再ログインはこちら','index');
   }
+
+
   public function index() {
     $users =$this->Auth->user();
+
     // Twitter Timeline の表示
+
     $comsumer = $this->__createComsumer();
+
   //  $key = 'wuo9ieChee1ienai7ur7ahkie1Fee4ei';//暗号化用の鍵用意
+
 //     $users['access_token_key'] =  Security::decrypt($users['access_token_key'],$key);
   //  $users['access_token_secret'] =  Security::decrypt($users['access_token_secret'],$key);
+
+
     $twitterData="";
     $json=$comsumer->get(
       $users['access_token_key'],
@@ -158,6 +190,7 @@ class ExamplesController extends AppController {
 
     // Posts テーブル内の全ての情報を読み出す
     //$posts = $this->Post->find('all');
+
     // View に各変数を引き渡す
     $this->set(compact(
       'users',
@@ -166,6 +199,8 @@ class ExamplesController extends AppController {
     ));
     //print_r($data);
   }
+
+
   // OAuthClient インスタンス生成 (__ で始まる関数はプライベート関数)
 	function __createComsumer(){
 		// コンシューマ・キーは  https://apps.twitter.com/ で取得
@@ -173,5 +208,6 @@ class ExamplesController extends AppController {
 		's8Z785x1q8OAgmhWmmfopA6vB',
 		'IGXvOnd6sKW7eAccoliiOiczZAKtzqyI6FKpfexNYJAaR7C9Zy');
 	}
+
 }
 ?>

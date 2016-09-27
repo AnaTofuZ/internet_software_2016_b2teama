@@ -16,40 +16,39 @@ class PostsController extends AppController {
  */
 //public $scaffold;
 
-
-	public $layout = 'sampleLayout'; //全体のレイアウトにこのファイルを使うお
-
-
-
 //アクション前処理(そこまで書かなくても良い?)
-		public function beforeFilter(){
+   public function beforeFilter(){
+
        //認証用ModelはTwitter認証を踏まえてTwitterDBに設定
        $this->Auth->userModel = 'User';
+
        $this->Auth->allow('login','callback','logout');
-       //post処理終了後にindexに遷移
-       $this->Post->postRedirect = array('controller' => 'posts','action' => 'index');
+
+      //post処理終了後にindexに遷移
+      $this->Post->postRedirect = array('controller' => 'posts','action' => 'index');
+
        //ログイン処理語に移動する標準アクション
+
        $this->Auth->loginRedirect = array('controller' => 'posts','action' => 'index');
         //ログイン処理を記述するアクション(Twitterexampleと共通)
        $this->Auth->loginAction = '/examples/login';
+
        $this->Security->validatePost = true; // 改竄対策を無効
        $this->Security->csrfCheck = false;    // CSR対策を無効
+
       parent::beforeFilter();
-		}
+   }
 
 
-	 	public function index(){
-
-
-				//$this->layout = 'sampleLayout'; //index内部だけレイアウトにこのファイルつかうお
-
-
+    public function index()
+    {
         $posts = $this->Post->find('all');
         $this->set('posts',$posts);
     }
 
 
-		public function add(){
+
+    public function add(){
         $user = $this->Auth->user();
         /*
          * 既にAuthでログイン済みなのでこの時点で$userには
@@ -60,31 +59,36 @@ class PostsController extends AppController {
          * が入っている
          */
         //print_r($user);
+
         if($this->request->is('post')){
             //この時点で$userの情報を格納しないといけない
             $this->Post->create();
             $temp = $this->request->data;
+
             $temp["Post"]["user_id_hush"] =  $user["id_hush"];
            // print_r($temp);
+
             if($this->Post->saveAssociated($temp)){
    //      if($this->Post->save($this->request->data)){
    //何かしらの記述
+
          }
           //$this->Session->setFlash(_('Succesed post.'),'default');
-         return $this->redirect(array('action' => 'index'));
+         //return $this->redirect(array('action' => 'index'));
       }else{
          $this->Session->setFlash(__('Post don\'t posted .'), 'default', array('class'=>'error-message'), 'auth');
       }
+
    }
 
 
-	 public function delete($id){
-   }
+   public function delete($id){
 
+   }
 
    public function edit($id){
        $user = $this->Auth->user();
-   }
 
+   }
 
 }
