@@ -255,13 +255,17 @@ class ExamplesController extends AppController {
             $users['access_token_secret'],
             'https://api.twitter.com/1.1/statuses/retweet/:id.json',
             array(':id' => "$id",
-                'trim_user' => true)
+                'trim_user' => 'true')
         );
 
         $this->Session->setFlash(_('りついーとしといた.'), 'default');
         return $this->redirect($this->Auth->redirect()); //次の画面に移動
 
       }
+    }
+
+    public function tweet(){
+      
     }
 
 }

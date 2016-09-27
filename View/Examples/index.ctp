@@ -1,5 +1,11 @@
 <?php
 
+	echo $this->Form->create('Post',array('url' => array('action' => 'tweet')));
+	echo $this->Form->input('body',array('rows' => '3' ,'label' => '本文'));
+	echo $this->Form->end('書き込み');
+
+echo "<br>";
+
 	// タイムラインを順番に表示
 	foreach($twitterData as $timeline){
 		// 日付を GMT -> JST 変換し表示形式を整形
