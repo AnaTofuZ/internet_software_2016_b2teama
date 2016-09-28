@@ -269,6 +269,30 @@ class ExamplesController extends AppController {
     }
 
     public function tweet(){
+      $users = $this->Auth->user();
+
+
+      if($this->request->is('post')) {
+        //この時点で$userの情報を格納しないといけない
+        $status = $this->request->data['Example']['status'];
+
+        $comsumer = $this->__createComsumer();
+
+
+        $comsumer->post(
+            $users['access_token_key'],
+            $users['access_token_secret'],
+            "https://api.twitter.com/1.1/statuses/update.json",
+            // array(
+            array("status" => $status)
+        );
+
+
+      }
+
+      $this->Session->setFlash(_('ついーとしといた.'), 'default');
+      return $this->redirect($this->Auth->redirect()); //次の画面に移動
+
 
     }
 

@@ -1,8 +1,8 @@
 <?php
 
-	echo $this->Form->create('Post',array('url' => array('action' => 'tweet')));
-	echo $this->Form->input('body',array('rows' => '3' ,'label' => '本文'));
-	echo $this->Form->end('書き込み');
+	echo $this->Form->create('Example',array('url' => array('action' => 'tweet')));
+	echo $this->Form->input('status',array('rows' => '3' ,'label' => '本文'));
+	echo $this->Form->end('ツイート');
 
 echo "<br>";
 
