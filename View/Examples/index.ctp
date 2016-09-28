@@ -1,5 +1,12 @@
 <?php
 
+//	/	print_r($userData);
+	print "こいつログイン中→";
+	print $this->Html->image($userData['profile_image_url']);
+	print '【'.$userData['name'].'】@'.
+	$this->Html->link($userData['screen_name'],
+		'http://www.twitter.com/'.$userData['screen_name']);
+
 	echo $this->Form->create('Example',array('url' => array('action' => 'tweet')));
 	echo $this->Form->input('status',array('rows' => '3' ,'label' => '本文'));
 	echo $this->Form->end('ツイート');

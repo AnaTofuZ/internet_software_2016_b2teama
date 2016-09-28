@@ -187,6 +187,18 @@ class ExamplesController extends AppController {
       );
     $twitterData = json_decode($json,true);
 
+    $userData="";
+
+    $json=$comsumer->get(
+        $users['access_token_key'],
+        $users['access_token_secret'],
+        'https://api.twitter.com/1.1/users/show.json',
+        array('user_id' => $users['id'],
+              'include_entities' => 'false')
+    );
+
+    $userData = json_decode($json,true);
+
 
     // Posts テーブル内の全ての情報を読み出す
     //$posts = $this->Post->find('all');
@@ -195,7 +207,8 @@ class ExamplesController extends AppController {
     $this->set(compact(
       'users',
       'posts',
-      'twitterData'
+      'twitterData',
+      'userData'
     ));
     //print_r($data);
   }
