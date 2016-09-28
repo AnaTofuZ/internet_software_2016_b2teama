@@ -15,7 +15,7 @@
 
 <!-- ここからbody -->
 <body>
-	<div id = title>
+	<div id = content>
 		<?php echo $this->fetch('content'); ?>
 	</div>
 </body>
