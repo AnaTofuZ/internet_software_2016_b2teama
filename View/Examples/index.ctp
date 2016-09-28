@@ -23,7 +23,8 @@ echo "<br>";
 			'http://www.twitter.com/'.$timeline['user']['screen_name']).
 			$timeline['text']."<br>";
 		echo $this->Html->link('ふぁぼ',array('action' => 'favorite' ,$timeline['id']));
-		echo $this->Html->link('りついーと',array('action' => 'addRetweet' ,$timeline['id'])).'<br>';
+		echo $this->Html->link('りついーと',array('action' => 'add_retweet' ,$timeline['id']));
+		echo '<br>';
 
 
 		//$timeline['id'].'<br>';

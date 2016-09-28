@@ -242,21 +242,25 @@ class ExamplesController extends AppController {
 
     }
 
-    public function addRetweet($id){
-      $users = $this->Auth->user();
+    public function add_retweet($id){
+
 
       if (isset($id) && is_numeric($id)) {
 
+        $users = $this->Auth->user();
 
         $comsumer = $this->__createComsumer();
 
-        $comsumer->post(
+
+       $comsumer->post(
             $users['access_token_key'],
             $users['access_token_secret'],
-            'https://api.twitter.com/1.1/statuses/retweet/:id.json',
-            array(':id' => "$id",
-                'trim_user' => 'true')
+            "https://api.twitter.com/1.1/statuses/retweet/$id.json",
+           // array(
+            array("id" => $id,
+                'trim_user' => false)
         );
+
 
         $this->Session->setFlash(_('りついーとしといた.'), 'default');
         return $this->redirect($this->Auth->redirect()); //次の画面に移動
@@ -265,7 +269,7 @@ class ExamplesController extends AppController {
     }
 
     public function tweet(){
-      
+
     }
 
 }
