@@ -23,7 +23,8 @@ class ExamplesController extends AppController {
     $this->Auth->logoutRedirect = array('controller' => 'examples','action' => 'logout');
     // ログイン処理を記述するアクション
     $this->Auth->loginAction = '/examples/login';
-
+    $this->Auth->favoriteRedirect = array('controller' => 'examples','action' => 'index');
+    $this->Auth->addRetweetRedirect = array('controller' => 'examples','action' => 'index');
 
     // 認証で利用するフィールド名
     $this->Auth->fields = array(
@@ -128,13 +129,15 @@ class ExamplesController extends AppController {
         }
         else{
 
-          $ciper =  $user['User']['access_token_key'];
-          $ciper =  Security::decrypt($ciper,$key);
-          $user['User']['access_token_key'] = $ciper;
+          $user['User']['access_token_key'] = Security::decrypt($user['User']['access_token_key'],$key);
           //print_r($key);
           $user['User']['access_token_secret'] =  Security::decrypt($user['User']['access_token_secret'],$key);
 
 
+          //  ログイン済みであれば index に遷移
+          if(isset($user['id'])){
+            return $this->redirect($this->Auth->redirect()); //Twitter認証にぶっ飛ぶ
+          }
 
           if ($this->Auth->login($user[$this->Auth->userModel])) {  //ログイン処理を呼び出して,ログイン出来れば
             /*
@@ -148,11 +151,7 @@ class ExamplesController extends AppController {
           }
         }
     }
-    /* ログイン済みであれば index に遷移
-    if(isset($user['id'])){
-      return $this->redirect($this->Auth->redirect()); //Twitter認証にぶっ飛ぶ
-    }
-*/
+
 
   }
 
@@ -171,13 +170,14 @@ class ExamplesController extends AppController {
     // Twitter Timeline の表示
 
     $comsumer = $this->__createComsumer();
+    //print_r($comsumer);
+    /*
+    $key = 'wuo9ieChee1ienai7ur7ahkie1Fee4ei';//暗号化用の鍵用意
 
-  //  $key = 'wuo9ieChee1ienai7ur7ahkie1Fee4ei';//暗号化用の鍵用意
+     $users['access_token_key'] =  Security::decrypt($users['access_token_key'],$key);
+    $users['access_token_secret'] =  Security::decrypt($users['access_token_secret'],$key);
 
-//     $users['access_token_key'] =  Security::decrypt($users['access_token_key'],$key);
-  //  $users['access_token_secret'] =  Security::decrypt($users['access_token_secret'],$key);
-
-
+*/
     $twitterData="";
     $json=$comsumer->get(
       $users['access_token_key'],
@@ -187,6 +187,18 @@ class ExamplesController extends AppController {
       );
     $twitterData = json_decode($json,true);
 
+    $userData="";
+
+    $json=$comsumer->get(
+        $users['access_token_key'],
+        $users['access_token_secret'],
+        'https://api.twitter.com/1.1/users/show.json',
+        array('user_id' => $users['id'],
+              'include_entities' => 'false')
+    );
+
+    $userData = json_decode($json,true);
+
 
     // Posts テーブル内の全ての情報を読み出す
     //$posts = $this->Post->find('all');
@@ -195,7 +207,8 @@ class ExamplesController extends AppController {
     $this->set(compact(
       'users',
       'posts',
-      'twitterData'
+      'twitterData',
+      'userData'
     ));
     //print_r($data);
   }
@@ -208,6 +221,93 @@ class ExamplesController extends AppController {
 		's8Z785x1q8OAgmhWmmfopA6vB',
 		'IGXvOnd6sKW7eAccoliiOiczZAKtzqyI6FKpfexNYJAaR7C9Zy');
 	}
+
+
+	public function favorite($id)
+    {
+
+
+      if (isset($id) && is_numeric($id)) {
+       // $user = $this->Auth->user();
+
+
+        //  $this->render("index");
+        $users = $this->Auth->user();
+
+        $comsumer = $this->__createComsumer();
+
+
+        $comsumer->post(
+            $users['access_token_key'],
+            $users['access_token_secret'],
+            'https://api.twitter.com/1.1/favorites/create.json',
+            array('id' => "$id",
+                'include_entities' => 'true')
+        );
+
+
+        $this->Session->setFlash(_('ふぁぼった.'), 'default');
+
+        return $this->redirect($this->Auth->redirect()); //次の画面に移動
+
+
+      }
+
+    }
+
+    public function add_retweet($id){
+
+
+      if (isset($id) && is_numeric($id)) {
+
+        $users = $this->Auth->user();
+
+        $comsumer = $this->__createComsumer();
+
+
+       $comsumer->post(
+            $users['access_token_key'],
+            $users['access_token_secret'],
+            "https://api.twitter.com/1.1/statuses/retweet/$id.json",
+           // array(
+            array("id" => $id,
+                'trim_user' => false)
+        );
+
+
+        $this->Session->setFlash(_('りついーとしといた.'), 'default');
+        return $this->redirect($this->Auth->redirect()); //次の画面に移動
+
+      }
+    }
+
+    public function tweet(){
+      $users = $this->Auth->user();
+
+
+      if($this->request->is('post')) {
+        //この時点で$userの情報を格納しないといけない
+        $status = $this->request->data['Example']['status'];
+
+        $comsumer = $this->__createComsumer();
+
+
+        $comsumer->post(
+            $users['access_token_key'],
+            $users['access_token_secret'],
+            "https://api.twitter.com/1.1/statuses/update.json",
+            // array(
+            array("status" => $status)
+        );
+
+
+      }
+
+      $this->Session->setFlash(_('ついーとしといた.'), 'default');
+      return $this->redirect($this->Auth->redirect()); //次の画面に移動
+
+
+    }
 
 }
 ?>

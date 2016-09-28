@@ -1,23 +1,32 @@
 <!DOCTYPE html>
 <html lang="ja">
+<!-- ここからhead -->
 <head>
     <?php echo $this->Html->charset(); ?>
-    <meta name="copyright" content="&copy; atomicbox">
-    <title><?php echo $title_for_layout; ?></title>
+    <title>
+        <?php echo $title_for_layout; ?>
+    </title>
     <?php echo $this->Html->meta('icon');?>
+    <?php echo $this->Html->css('sample-style.css'); ?>	<!-- webroot/css/base-style.cssを読み込む設定(CSS?何それおいしいの？) -->
     <?php echo $this->fetch('meta');?>
-    <?php echo $this->Html->css('base-style.css'); ?>
     <?php echo $this->fetch('css');?>
     <?php echo $this->fetch('script');?>
 </head>
 
+<!-- ここからbody -->
 <body>
-<div id="contents">
-    <h1>ウェイソイヤ</h1>
-    <?php echo $this->fetch('content'); ?>
+<h1>
+    <center>掲示板(?)のサンプル</center>
+</h1>
+
+<div style="padding: 10px; margin-bottom: 10px; border: 5px double #333333; border-radius: 10px; background-color: #ffff99;">
+    <div id="contents">
+        <h2><?php echo $this->fetch('content'); ?></h2>
+    </div>
 </div>
-<p id="copyright">&copy; asdfasdf</p>
-</div>
+
+
+
 </body>
 
 </html>

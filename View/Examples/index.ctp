@@ -1,5 +1,18 @@
 <?php
 
+//	/	print_r($userData);
+	print "こいつログイン中→";
+	print $this->Html->image($userData['profile_image_url']);
+	print '【'.$userData['name'].'】@'.
+	$this->Html->link($userData['screen_name'],
+		'http://www.twitter.com/'.$userData['screen_name']);
+
+	echo $this->Form->create('Example',array('url' => array('action' => 'tweet')));
+	echo $this->Form->input('status',array('rows' => '3' ,'label' => '本文'));
+	echo $this->Form->end('ツイート');
+
+echo "<br>";
+
 	// タイムラインを順番に表示
 	foreach($twitterData as $timeline){
 		// 日付を GMT -> JST 変換し表示形式を整形
@@ -15,7 +28,13 @@
 		print $time.'【'.$timeline['user']['name'].'】@'.
 			$this->Html->link($timeline['user']['screen_name'],
 			'http://www.twitter.com/'.$timeline['user']['screen_name']).
-			$timeline['text'].'<br>';
+			$timeline['text']."<br>";
+		echo $this->Html->link('ふぁぼ',array('action' => 'favorite' ,$timeline['id']));
+		echo $this->Html->link('りついーと',array('action' => 'add_retweet' ,$timeline['id']));
+		echo '<br>';
+
+
+		//$timeline['id'].'<br>';
 
 	}
 	/*
