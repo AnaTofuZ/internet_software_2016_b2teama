@@ -85,7 +85,7 @@ class PostsController extends AppController {
 
            //  print_r($id);
              $post = $this ->Post->read(null,$id); //DBの中のレコードをpostで定義
-    print_r($post["Users"]);
+//    print_r($post["Users"]);
              if(isset($post)){
 
                  if($user['id_hush'] == $post['Post']['user_id_hush']){

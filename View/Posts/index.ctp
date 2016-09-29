@@ -13,7 +13,6 @@
 	echo '</center>';
 	echo '</div><br>';
 
-print_r($posts);
 
 	foreach($posts as $post){
 		echo '<h1>';
