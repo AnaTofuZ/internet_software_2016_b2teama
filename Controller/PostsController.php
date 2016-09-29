@@ -79,6 +79,27 @@ class PostsController extends AppController {
 
 
 	 public function delete($id){
+         $user = $this->Auth->user();
+
+         if(isset($id) && is_numeric($id)){
+
+           //  print_r($id);
+             $post = $this ->Post->read(null,$id); //DBの中のレコードをpostで定義
+    print_r($post["Users"]);
+             if(isset($post)){
+
+                 if($user['id_hush'] == $post['Post']['user_id_hush']){
+                     $this->Post->delete($id);
+
+                 }else{
+                     $this->Session->setFlash(_('それ人の投稿!!!.'),'default');
+                     return $this->redirect(array('action' => 'index'));
+                 }
+             }
+
+         }
+         return $this->redirect(array('action' => 'index'));
+
    }
 
 
