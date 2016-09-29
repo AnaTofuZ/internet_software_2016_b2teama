@@ -57,9 +57,11 @@ class ExamplesController extends AppController {
     $requestToken=$this->Session->read('twitter_request_token');
     $comsumer = $this->__createComsumer();
     // 認証ユーザのアクセス・トークン取得
+
     $accessToken = $comsumer->getAccessToken(
           'https://api.twitter.com/oauth/access_token',
           $requestToken);
+
     if($accessToken){
       // 認証ユーザ情報の取得（戻り値は json 形式）
       $json=$comsumer->get(
@@ -67,8 +69,25 @@ class ExamplesController extends AppController {
         $accessToken->secret,
         'https://api.twitter.com/1.1/account/verify_credentials.json',
         array());
+
       // json => 配列変換
       $twitterData = json_decode($json,true);
+
+
+      $userData="";
+
+      $json=$comsumer->get(
+          $accessToken->key,
+          $accessToken->secret,
+          'https://api.twitter.com/1.1/users/show.json',
+          array('user_id' => $twitterData['id'],
+              'include_entities' => 'false')
+      );
+
+      $userData = json_decode($json,true);
+
+
+
       $key = 'wuo9ieChee1ienai7ur7ahkie1Fee4ei';//暗号化用の鍵用意
       // データベース保存用のデータ生成
       $user['id'] = $twitterData['id_str'];
@@ -77,6 +96,7 @@ class ExamplesController extends AppController {
       $user['screen_name'] = $twitterData['screen_name'];
       $user['access_token_key'] = Security::encrypt($accessToken->key,$key);//アクセストークン類を可逆暗号化
       $user['access_token_secret'] = Security::encrypt($accessToken->secret,$key);
+      $user['profile_image_url'] = $userData['profile_image_url'];
       // Users テーブルの更新
       $this->User->save($user);
       // Cookie 用に id  を保存
@@ -84,7 +104,6 @@ class ExamplesController extends AppController {
 
       // $cipher = Security::encrypt($user['id'],$key);//暗号化
       $this->Cookie->write('senbei',$user['id_hush']);//暗号化したものをCookieとして渡す->変更:ハッシュ値を送る
-//      $this->Cookie->write('id', $user['id']);
       $user['access_token_key'] =  Security::decrypt($user['access_token_key'],$key);
       $user['access_token_secret'] =  Security::decrypt($user['access_token_secret'],$key);
       // Auth Component 内のログイン処理呼び出し
@@ -158,18 +177,6 @@ class ExamplesController extends AppController {
       );
     $twitterData = json_decode($json,true);
 
-    $userData="";
-
-    $json=$comsumer->get(
-        $users['access_token_key'],
-        $users['access_token_secret'],
-        'https://api.twitter.com/1.1/users/show.json',
-        array('user_id' => $users['id'],
-              'include_entities' => 'false')
-    );
-
-    $userData = json_decode($json,true);
-
 
     // Posts テーブル内の全ての情報を読み出す
     //$posts = $this->Post->find('all');
@@ -177,8 +184,7 @@ class ExamplesController extends AppController {
     $this->set(compact(
       'users',
       'posts',
-      'twitterData',
-      'userData'
+      'twitterData'
     ));
     //print_r($data);
   }

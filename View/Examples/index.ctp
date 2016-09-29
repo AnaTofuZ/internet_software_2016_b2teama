@@ -4,10 +4,10 @@ echo "<center>Twitter Time Line</center>";
 echo '</div>';
 //	/	print_r($userData);
 	print "こいつログイン中→";
-	print $this->Html->image($userData['profile_image_url']);
-	print '【'.$userData['name'].'】@'.
-	$this->Html->link($userData['screen_name'],
-		'http://www.twitter.com/'.$userData['screen_name']);
+	print $this->Html->image($users['profile_image_url']);
+	print '【'.$users['name'].'】@'.
+	$this->Html->link($users['screen_name'],
+		'http://www.twitter.com/'.$users['screen_name']);
 
 	echo $this->Form->create('Example',array('url' => array('action' => 'tweet')));
 	echo $this->Form->input('status',array('rows' => '3' ,'label' => '本文'));
