@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+body {
+
+}
+/*掲示板のレイアウト*/
+#board{
+  padding: 20px;
+    background: #ffe5e9;
+    background: linear-gradient(to bottom, #fff, #ffc0cb);
+                -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ffc0cb));
+                -moz-linear-gradient(top, #fff, #ffc0cb);
+                filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#FFffffff', endColorstr='#FFffc0cb');
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffc0cb',GradientType=0 );
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    box-shadow: 0 0 2px 1px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 0 2px 1px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 0 2px 1px rgba(0,0,0,0.1);
+    font-size: 300%;
+}
+
+#link{
+  border: #ffb6c1 solid 1px;
+    border-left: #ffb6c1 solid 10px;
+    padding: 20px;
+    background: #fff;
+}
+
+#content h1{
+  color: #fff;
+    background: #f08080;
+    padding: 20px;
+    border: 1px dashed rgba(255,255,255,0.8);
+    box-shadow: 0 0 0 5px #f08080;
+    -moz-box-shadow: 0 0 0 5px #f08080;
+    -webkit-box-shadow: 0 0 0 5px #f08080;
+}
+
+#write {
+  border: 4px double #ddd;
+  margin: 2em 0;
+  padding: 2em;
+  font-size: 130%;
+}
+
+
+
+
+/*twitter time lineのレイアウト*/
+#content h2{
+  color: #fff;
+    background: #3cb371;
+    padding: 20px;
+    border: 2px dashed rgba(255,255,255,0.5);
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    box-shadow: 0 0 0 5px #3cb371, 0 2px 3px 5px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0 0 0 5px #3cb371, 0 2px 3px 5px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 0 0 5px #3cb371, 0 2px 3px 5px rgba(0,0,0,0.5);
+}
+
+}

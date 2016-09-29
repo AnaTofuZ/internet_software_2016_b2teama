@@ -1,17 +1,24 @@
 <?php
-
 //print_r($posts);
 
-	foreach($posts as $post){
-		echo $post['Post']['title']."<br>";
-		echo $post['Post']['body']."<br>";
-        echo $post['Users']['name']."<br>";
-        echo "@".$post['Users']['screen_name']."<br>"."_______";
-        echo "<br>";
-	}
-		echo "<br>";
-		echo $this->Html->link('新規書き込み',array('action' => 'add'));
-        echo "<br>";
-        echo $this->Html->link('TwitterTL',array('action' => '../examples/login'));
+	echo '<div id = board>';
+	echo "<center>掲示板</center>";
+	echo '</div><br>';
 
+	echo '<div id = link>';
+	echo '<center>';
+	echo $this->Html->link('新規書き込み',array('action' => 'add'));
+	echo " ";
+	echo $this->Html->link('TwitterTL',array('action' => '../examples/login'));
+	echo '</center>';
+	echo '</div><br>';
+
+	foreach($posts as $post){
+		echo '<h1>';
+		echo $post['Post']['id'].".<br>";
+		echo "投稿者:".$post['Users']['name']."<br>";
+		echo "twitterID:@".$post['Users']['screen_name']."<br>";
+		echo "タイトル:".$post['Post']['title']."<br>";
+		echo "本文:".$post['Post']['body']."</h1><br>";
+	}
 ?>
