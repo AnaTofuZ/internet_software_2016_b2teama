@@ -6,11 +6,22 @@
  * Time: 16:19
 */
 	echo '<div id = board>';
-	echo "<center>Twitter Time Line</center>";
+	echo "<center>ふぁぼTwitter Time Line</center>";
 	echo '</div><br>';
 
 	echo $this->Session->flash(); //メッセージの表示
 
+
+    echo '<center>';
+    echo '<a class = "button" href = "/cakephp/Posts/index">';
+    echo "掲示板";
+    echo '</a>';
+    echo " ";
+    echo '<a class = "button" href = "/cakephp/examples/index">';
+    echo "TwitterTL";
+    echo '</a>';
+    echo '</center>';
+/*
 	echo '<div id = link>';
 	echo '<center>';
 	echo $this->Html->link('掲示板',array('action' => '../Posts/index'));
@@ -18,7 +29,7 @@
 	echo $this->Html->link('ログアウト',array('action' => 'logout'));
 	echo '</center>';
 	echo '</div>';
-
+*/
 //	/	print_r($userData);
 
 

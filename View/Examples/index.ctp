@@ -12,6 +12,10 @@
 	echo "掲示板";
 	echo '</a>';
 	echo " ";
+	echo '<a class = "button" href = "/cakephp/examples/favotl">';
+	echo "ふぁぼTL";
+	echo '</a>';
+	echo " ";
 	echo '<a class = "button" href = "/cakephp/examples/logout">';
 	echo "ログアウト";
 	echo '</a>';
