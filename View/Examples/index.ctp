@@ -6,15 +6,16 @@
 
 	echo $this->Session->flash(); //メッセージの表示
 
-	echo '<div id = link>';
-	echo '<center>';
-	echo $this->Html->link('掲示板',array('action' => '../Posts/index'));
-echo $this->Html->link('ふぁぼ',array('action' => 'favotl'));
 
+	echo '<center>';
+	echo '<a class = "button" href = "/cakephp/Posts/index">';
+	echo "掲示板";
+	echo '</a>';
 	echo " ";
-	echo $this->Html->link('ログアウト',array('action' => 'logout'));
+	echo '<a class = "button" href = "/cakephp/examples/logout">';
+	echo "ログアウト";
+	echo '</a>';
 	echo '</center>';
-	echo '</div>';
 
 //	/	print_r($userData);
 	echo '<div id = write>';

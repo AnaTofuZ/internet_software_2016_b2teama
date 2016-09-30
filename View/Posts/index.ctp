@@ -6,13 +6,16 @@
 
 	echo $this->Session->flash(); //メッセージの表示
 
-	echo '<div id = link>';
 	echo '<center>';
-	echo $this->Html->link('新規書き込み',array('action' => 'add'));
+	echo '<a class = "button" href = "/cakephp/Posts/add">';
+	echo "新規書き込み";
+	echo '</a>';
 	echo " ";
-	echo $this->Html->link('TwitterTL',array('action' => '../examples/login'));
+	echo '<a class = "button" href = "/cakephp/examples/login">';
+	echo "TwitterTL";
+	echo '</a>';
 	echo '</center>';
-	echo '</div><br>';
+	echo '<br>';
 
 
 	foreach($posts as $post){
