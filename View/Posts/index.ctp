@@ -1,5 +1,4 @@
 <?php
-//print_r($posts);
 	echo '<div id = board>';
 	echo "<center>匿名掲示板(匿名とは言ってない)</center>";
 	echo '</div><br>';
@@ -14,8 +13,7 @@
 	echo '<a class = "button" href = "/cakephp/examples/login">';
 	echo "TwitterTL";
 	echo '</a>';
-	echo '</center>';
-	echo '<br>';
+	echo '</center><br>';
 
 
 	foreach($posts as $post){

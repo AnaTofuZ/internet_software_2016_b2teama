@@ -6,7 +6,6 @@
 
 	echo $this->Session->flash(); //メッセージの表示
 
-
 	echo '<center>';
 	echo '<a class = "button" href = "/cakephp/Posts/index">';
 	echo "掲示板";
@@ -21,7 +20,6 @@
 	echo '</a>';
 	echo '</center>';
 
-//	/	print_r($userData);
 	echo '<div id = write>';
 	echo '<center>';
 	print "こいつログイン中→";
@@ -37,17 +35,11 @@
 	echo '</center>';
 	echo '</div>';
 
-
 	// タイムラインを順番に表示
 	foreach($twitterData as $timeline){
 		echo '<h2>';
 		// 日付を GMT -> JST 変換し表示形式を整形
 		$time = date('m月d日 H:i:s',strtotime($timeline['created_at']));
-		/* 簡易表示版
-		print $time.'【'.$timeline['user']['name'].'】@'.
-			$timeline['user']['screen_name'].' '.$timeline['text'].'<br>';
-			*/
-		// 上の簡易表示をコメントアウトし，以下を有効にすると・・
 		print $this->Html->image($timeline['user']['profile_image_url']);
 		print $time.'【'.$timeline['user']['name'].'】@'.
 			$this->Html->link($timeline['user']['screen_name'],
@@ -59,6 +51,5 @@
 		echo $this->Html->link('りついーと',array('action' => 'add_retweet' ,$timeline['id']));
 		echo '<br>';
 		echo '</h2>';
-
 	}
 ?>
