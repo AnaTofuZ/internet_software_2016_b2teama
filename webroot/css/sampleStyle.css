@@ -21,6 +21,8 @@ body {
     font-size: 300%;
 }
 
+
+/*これ消す*/
 #link{
   border: #ffb6c1 solid 1px;
     border-left: #ffb6c1 solid 10px;
@@ -42,7 +44,7 @@ body {
   border: 4px double #ddd;
   margin: 2em 0;
   padding: 2em;
-  font-size: 130%;
+  font-size: 110%;
 }
 
 
@@ -69,4 +71,21 @@ body {
     color: #0a8915;
     margin: 2em 0;
     padding: 2em;
+}
+
+
+/*リンクのボタンのレイアウト*/
+.button {
+   background: -moz-linear-gradient(top,#BFD9E5, #3D95B7 50%,#0080B3 50%,#0099CC);
+    background: -webkit-gradient(linear, left top, left bottom, from(#BFD9E5), color-stop(0.5,#3D95B7), color-stop(0.5,#0080B3), to(#0099CC));
+    color: #FFF;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border: 1px solid #0099CC;
+    -moz-box-shadow: 1px 1px 1px rgba(000,000,000,0.3),inset 0px 0px 3px rgba(255,255,255,0.5);
+    -webkit-box-shadow: 1px 1px 1px rgba(000,000,000,0.3),inset 0px 0px 3px rgba(255,255,255,0.5);
+    text-shadow: 0px 0px 3px rgba(0,0,0,0.5);
+    width: 100px;
+    padding: 20px 0;
 }
