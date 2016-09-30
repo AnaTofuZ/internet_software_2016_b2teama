@@ -1,1 +1,7 @@
-<?php echo $this->Html->link('Twitterでログイン','/examples/twitter'); ?>
+<?php
+  echo '<center>';
+  echo '<a class = "button" href = "/cakephp/examples/twitter">';
+  echo "Twitterでログイン";
+  echo '</a>';
+  echo '</center>';
+?>

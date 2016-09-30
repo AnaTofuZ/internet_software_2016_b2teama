@@ -161,8 +161,8 @@ class ExamplesController extends AppController {
 
   public function logout(){
     $this->Auth->logout();
-    $this->flash('再ログインはこちら','index');
   }
+
   public function index() {
     $users =$this->Auth->user();
     // Twitter Timeline の表示
