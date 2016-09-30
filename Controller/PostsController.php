@@ -38,7 +38,7 @@ class PostsController extends AppController {
 
 
 	 	public function index(){
-        $posts = $this->Post->find('all');
+        $posts = $this->Post->find('all',array('order' => array('Post.id ASC')));
         $this->set('posts',$posts);
     }
 
