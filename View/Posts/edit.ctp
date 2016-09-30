@@ -9,11 +9,11 @@ echo '<div id = board>';
 echo "<center>へんさう</center>";
 echo '</div><br>';
 
-echo '<div id = link>';
 echo '<center>';
-echo $this->Html->link('掲示板に戻る',array('action' => 'index'));
+echo '<a class = "button" href = "/cakephp/Posts/index">';
+echo "掲示板に戻る";
+echo '</a>';
 echo '</center>';
-echo '</div>';
 
 echo '<div id = write>';
 echo '<center>';
