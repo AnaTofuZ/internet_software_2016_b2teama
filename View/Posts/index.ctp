@@ -4,6 +4,8 @@
 	echo "<center>匿名掲示板(匿名とは言ってない)</center>";
 	echo '</div><br>';
 
+	echo $this->Session->flash(); //メッセージの表示
+
 	echo '<div id = link>';
 	echo '<center>';
 	echo $this->Html->link('新規書き込み',array('action' => 'add'));
@@ -20,6 +22,7 @@
 		echo "タイトル:".$post['Post']['title']."<br>";
 		echo "本文:".$post['Post']['body']."<br><br>";
 		echo $this->Html->link('削除',array('action' => 'delete' ,$post['Post']['id']));
+		echo " ";
 		echo $this->Html->link('編集',array('action' => 'edit',$post['Post']['id']))."<br>";
 		echo '</h1>';
 	}
