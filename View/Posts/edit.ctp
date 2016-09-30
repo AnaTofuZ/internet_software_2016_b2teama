@@ -6,7 +6,7 @@
  * Time: 11:46
  */
 echo '<div id = board>';
-echo "<center>へんちう</center>";
+echo "<center>へんさう</center>";
 echo '</div>';
 
 echo '<div id = write>';
