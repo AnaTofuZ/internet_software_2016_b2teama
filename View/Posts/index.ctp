@@ -17,7 +17,7 @@
 	foreach($posts as $post){
 		echo '<h1>';
 		echo $post['Post']['id'].".<br>";
-		echo "投稿者:".$post['Users']['name']."<br>";
+		echo "投稿者:".$post['Users']['name'].$this->Html->image($post['Users']['profile_image_url'])."<br>";
 		echo "twitterID:@".$post['Users']['screen_name']."<br>";
 		echo "タイトル:".$post['Post']['title']."<br>";
 		echo "本文:".$post['Post']['body']."<br><br>";

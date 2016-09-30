@@ -33,7 +33,7 @@ class PostsController extends AppController {
         //ログイン処理を記述するアクション(Twitterexampleと共通)
        $this->Auth->loginAction = '/examples/login';
        $this->Security->validatePost = true; // 改竄対策を無効
-       $this->Security->csrfCheck = false;    // CSR対策を無効
+       $this->Security->csrfCheck = true;    // CSR対策を無効
       parent::beforeFilter();
 		}
 
