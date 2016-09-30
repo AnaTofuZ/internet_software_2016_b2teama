@@ -63,12 +63,11 @@ body {
 }
 
 #flashMessage {
-   background-color: #cafbce;
-     border: 2px solid #fff;
-     box-shadow: 0 0 0 2px #cafbce;
-     color: #0a8915;
-     margin: 2em 0;
-     padding: 2em;
- }
 
-
+  background-color: #cafbce;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 2px #cafbce;
+    color: #0a8915;
+    margin: 2em 0;
+    padding: 2em;
+}

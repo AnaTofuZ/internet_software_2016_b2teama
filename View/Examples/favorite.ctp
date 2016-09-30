@@ -8,5 +8,4 @@
 echo '<tr>';
 echo $this->Html->link('もどる',array('action' => 'index'));
 echo '</tr><br>';
-
 ?>

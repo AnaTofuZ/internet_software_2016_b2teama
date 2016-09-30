@@ -222,6 +222,7 @@ class ExamplesController extends AppController {
 
         $this->Session->setFlash('ふぁぼった.');
 
+
         return $this->redirect($this->Auth->redirect()); //次の画面に移動
 
 

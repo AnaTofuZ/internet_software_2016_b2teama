@@ -20,7 +20,6 @@ class PostsController extends AppController {
 	public $layout = 'sampleLayout'; //全体のレイアウトにこのファイルを使う
 
 
-
 //アクション前処理(そこまで書かなくても良い?)
 		public function beforeFilter(){
        //認証用ModelはTwitter認証を踏まえてTwitterDBに設定
@@ -39,11 +38,6 @@ class PostsController extends AppController {
 
 
 	 	public function index(){
-
-
-				//$this->layout = 'sampleLayout'; //index内部だけレイアウトにこのファイルを使う
-
-
         $posts = $this->Post->find('all');
         $this->set('posts',$posts);
     }
