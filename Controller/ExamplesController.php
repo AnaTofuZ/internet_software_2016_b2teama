@@ -7,7 +7,7 @@ class ExamplesController extends AppController {
 
   public $layout = 'sampleLayout';
   // Examples コントローラで用いる他のモデル(テーブル)
-  public $uses = array('User','Post');
+  public $uses = array('User','Post','Favorite');
   // 利用するコンポーネント(プラグイン)
   public $components = array('Auth','Cookie','DebugKit.Toolbar');
   // コントローラ内の各アクション(関数)を実行する前に処理
@@ -210,14 +210,28 @@ class ExamplesController extends AppController {
 
         $comsumer = $this->__createComsumer();
 
+        $json = "";
 
-        $comsumer->post(
+       $json= $comsumer->post(
             $users['access_token_key'],
             $users['access_token_secret'],
             'https://api.twitter.com/1.1/favorites/create.json',
             array('id' => "$id",
                 'include_entities' => 'true')
         );
+
+        $favoriteData = json_decode($json,true);
+
+        $favo['name'] =$favoriteData['user']['name'];
+        $favo['status'] =$favoriteData['text'];
+        $favo['screen_name'] = $favoriteData['user']['screen_name'];
+        $favo['profile_image_url'] = $favoriteData['user']['profile_image_url'];
+        $favo['created_at'] = $favoriteData['created_at'];
+
+
+
+        $this->Favorite->save($favo);
+
 
 
         $this->Session->setFlash('ふぁぼった.');
@@ -282,6 +296,11 @@ class ExamplesController extends AppController {
       return $this->redirect($this->Auth->redirect()); //次の画面に移動
 
 
+    }
+
+    public function favotl(){
+      $tweets = $this->Favorite->find('all',array('order' => array('Favorite.id DESC')));
+      $this->set('TwitterData',$tweets);
     }
 
 }

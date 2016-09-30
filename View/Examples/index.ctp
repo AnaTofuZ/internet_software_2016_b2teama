@@ -9,6 +9,8 @@
 	echo '<div id = link>';
 	echo '<center>';
 	echo $this->Html->link('掲示板',array('action' => '../Posts/index'));
+echo $this->Html->link('ふぁぼ',array('action' => 'favotl'));
+
 	echo " ";
 	echo $this->Html->link('ログアウト',array('action' => 'logout'));
 	echo '</center>';
