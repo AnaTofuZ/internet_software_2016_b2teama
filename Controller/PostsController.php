@@ -79,12 +79,53 @@ class PostsController extends AppController {
 
 
 	 public function delete($id){
+         $user = $this->Auth->user();
+
+         if(isset($id) && is_numeric($id)){
+
+           //  print_r($id);
+             $post = $this ->Post->read(null,$id); //DBの中のレコードをpostで定義
+//    print_r($post["Users"]);
+             if(isset($post)){
+
+                 if($user['id_hush'] == $post['Post']['user_id_hush']){
+                     $this->Post->delete($id);
+
+                 }else{
+                     $this->Session->setFlash(_('それ人の投稿!!!.'),'default');
+                     return $this->redirect(array('action' => 'index'));
+                 }
+             }
+
+         }
+         return $this->redirect(array('action' => 'index'));
+
    }
 
 
-   public function edit($id){
+   public function edit($id)
+   {
        $user = $this->Auth->user();
-   }
+       $this->Post->id = $id;
+       $post = $this->Post->read(null, $id); //DBの中のレコードをpostで定義
 
+       if ($user['id_hush'] == $post['Post']['user_id_hush']) {
+
+           if ($this->request->is('get')) {
+               $this->request->data = $this->Post->read();
+           } else {
+               if($this->Post->save($this->request->data)){
+                   $this->Session->setFlash(_('更新んご.'),'default');
+                   return $this->redirect(array('action' => 'index'));
+               }else{
+                   $this->Session->setFlash(_('むりぽ….'),'default');
+               }
+
+           }
+       }else{
+           $this->Session->setFlash(_('それ人の投稿!!!.'),'default');
+           return $this->redirect(array('action' => 'index'));
+       }
+   }
 
 }

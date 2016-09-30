@@ -13,12 +13,18 @@
 	echo '</center>';
 	echo '</div><br>';
 
+
 	foreach($posts as $post){
 		echo '<h1>';
 		echo $post['Post']['id'].".<br>";
 		echo "投稿者:".$post['Users']['name']."<br>";
 		echo "twitterID:@".$post['Users']['screen_name']."<br>";
 		echo "タイトル:".$post['Post']['title']."<br>";
-		echo "本文:".$post['Post']['body']."</h1><br>";
+		echo "本文:".$post['Post']['body']."<br><br>";
+		echo $this->Html->link('削除',array('action' => 'delete' ,$post['Post']['id']))."<br>";
+		echo $this->Html->link('編集',array('action' => 'edit',$post['Post']['id']))."<br>";
+		echo '</h1>';
+
 	}
+
 ?>
