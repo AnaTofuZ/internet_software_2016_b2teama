@@ -130,7 +130,7 @@ class ExamplesController extends AppController {
       //print_r($user);
         if(empty($user)) {
           //CookieがあってもDB側で値が存在していなかった場合
-          $this->Session->setFlash(_('Cookieが不正です。再ログインしてください.'),'default');
+          $this->Session->setFlash('Cookieが不正です。再ログインしてください.');
         }
         else{
 
@@ -220,7 +220,7 @@ class ExamplesController extends AppController {
         );
 
 
-        $this->Session->setFlash(_('ふぁぼった.'), 'default');
+        $this->Session->setFlash('ふぁぼった.');
 
         return $this->redirect($this->Auth->redirect()); //次の画面に移動
 
@@ -249,7 +249,7 @@ class ExamplesController extends AppController {
         );
 
 
-        $this->Session->setFlash(_('りついーとしといた.'), 'default');
+        $this->Session->setFlash('りついーとしといた.');
         return $this->redirect($this->Auth->redirect()); //次の画面に移動
 
       }
@@ -277,7 +277,7 @@ class ExamplesController extends AppController {
 
       }
 
-      $this->Session->setFlash(_('ついーとしといた.'), 'default');
+      $this->Session->setFlash('ついーとしといた.');
       return $this->redirect($this->Auth->redirect()); //次の画面に移動
 
 
