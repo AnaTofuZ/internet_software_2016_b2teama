@@ -1,7 +1,9 @@
 <?php
-	echo '<div id = board>';
-	echo "<center>匿名掲示板(匿名とは言ってない)</center>";
-	echo '</div><br>';
+echo <<< EOF
+    <div id = board>
+	<center>匿名掲示板(匿名とは言ってない)</center>
+	</div><br>
+      EOF;
 
 	echo $this->Session->flash(); //メッセージの表示
 
